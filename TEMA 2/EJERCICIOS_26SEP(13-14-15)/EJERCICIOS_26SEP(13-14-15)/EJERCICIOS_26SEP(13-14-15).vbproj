@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1F1D30DF-573A-479D-B45E-5919D28320C3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>EJERCICIOS_26SEP_13_14_15_.Module1</StartupObject>
+    <StartupObject>EJERCICIOS_26SEP_13_14_15_.Module4</StartupObject>
     <RootNamespace>EJERCICIOS_26SEP_13_14_15_</RootNamespace>
     <AssemblyName>EJERCICIOS_26SEP%2813-14-15%29</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -74,6 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Module1.vb" />
+    <Compile Include="Module2.vb" />
+    <Compile Include="Module3.vb" />
+    <Compile Include="Module4.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

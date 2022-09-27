@@ -1,18 +1,20 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim c1 As Single
-        Dim c1al2 As Single
-        Dim c2 As Single
-        Dim c2al2 As Single
-        Dim hipotenusa As Single
+        'EJERCICIO 13 BOLETÍN 2
+        Dim c1 As Double
 
-        c1 = Convert.ToSingle(InputBox("Introduzca el primer cateto"))
-        c2 = Convert.ToSingle(InputBox("Introduzca el segundo cateto"))
+        Dim c2 As Double
 
-        c1al2 = Convert.ToSingle(Math.Pow(c1, 2))
-        c2al2 = Convert.ToSingle(Math.Pow(c2, 2))
-        hipotenusa = Convert.ToSingle(Math.Pow(c1al2 + c1al2, 2))
+        Dim hipotenusa As Double
+
+        c1 = Convert.ToDouble(InputBox("Introduzca el primer cateto"))
+        c2 = Convert.ToDouble(InputBox("Introduzca el segundo cateto"))
+
+        c1 = Convert.ToDouble(Math.Pow(c1, 2))
+        c2 = Convert.ToDouble(Math.Pow(c2, 2))
+
+        hipotenusa = Math.Sqrt(c1 + c2)
 
         Console.WriteLine("La hipotenusa es " & hipotenusa)
         Console.ReadLine()
