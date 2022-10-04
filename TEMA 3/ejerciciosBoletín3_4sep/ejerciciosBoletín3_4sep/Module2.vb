@@ -1,5 +1,6 @@
 ﻿Module Module2
     Sub Main()
+        'Ejercicio 4
         Dim a, b, c, d, menor As Integer
         Console.WriteLine("INTRODUZACA A")
         a = Convert.ToInt32(Console.ReadLine)
