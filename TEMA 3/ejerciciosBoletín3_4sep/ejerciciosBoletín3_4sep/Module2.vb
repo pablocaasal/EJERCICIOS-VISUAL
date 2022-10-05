@@ -2,13 +2,13 @@
     Sub Main()
         'Ejercicio 4
         Dim a, b, c, d, menor As Integer
-        Console.WriteLine("INTRODUZACA A")
+        Console.WriteLine("INTRODUZCA A")
         a = Convert.ToInt32(Console.ReadLine)
-        Console.WriteLine("INTRODUZACA B")
+        Console.WriteLine("INTRODUZCA B")
         b = Convert.ToInt32(Console.ReadLine)
-        Console.WriteLine("INTRODUZACA C")
+        Console.WriteLine("INTRODUZCA C")
         c = Convert.ToInt32(Console.ReadLine)
-        Console.WriteLine("INTRODUZACA D")
+        Console.WriteLine("INTRODUZCA D")
         d = Convert.ToInt32(Console.ReadLine)
         If a > b Then
             menor = b
