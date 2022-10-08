@@ -9,3 +9,14 @@ C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Part
 C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\obj\Debug\EjerciciosBoletin3Parte2_5sep.exe
 C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\obj\Debug\EjerciciosBoletin3Parte2_5sep.xml
 C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\obj\Debug\EjerciciosBoletin3Parte2_5sep.pdb
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\bin\Debug\EjerciciosBoletin3Parte2_5sep.exe.config
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\bin\Debug\EjerciciosBoletin3Parte2_5sep.exe
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\bin\Debug\EjerciciosBoletin3Parte2_5sep.pdb
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\bin\Debug\EjerciciosBoletin3Parte2_5sep.xml
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\obj\Debug\EjerciciosBoletin3Parte2_5sep.vbproj.AssemblyReference.cache
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\obj\Debug\EjerciciosBoletin3Parte2_5sep.Resources.resources
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\obj\Debug\EjerciciosBoletin3Parte2_5sep.vbproj.GenerateResource.cache
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\obj\Debug\EjerciciosBoletin3Parte2_5sep.vbproj.CoreCompileInputs.cache
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\obj\Debug\EjerciciosBoletin3Parte2_5sep.exe
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\obj\Debug\EjerciciosBoletin3Parte2_5sep.xml
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\EjerciciosBoletin3Parte2_5sep\EjerciciosBoletin3Parte2_5sep\obj\Debug\EjerciciosBoletin3Parte2_5sep.pdb
