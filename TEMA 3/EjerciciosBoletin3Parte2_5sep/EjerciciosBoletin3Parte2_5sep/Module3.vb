@@ -11,7 +11,10 @@
             Console.WriteLine("Abrir válvula de seguridad")
         End If
 
+<<<<<<< HEAD
+=======
         Console.WriteLine("-----------------------------------------------------")
+>>>>>>> cc10482ca354a14dfe8e65e35e2bc49bd3bc34c1
         Console.WriteLine("Introduzca la temperatura ")
         temperatura = Convert.ToDouble(Console.ReadLine)
 

@@ -10,6 +10,6 @@
         If condición = False Then
             Console.WriteLine("El número es múltiplo de 2 o 3")
         End If
-        Console.ReadLine()
+
     End Sub
 End Module

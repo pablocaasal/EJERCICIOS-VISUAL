@@ -39,15 +39,19 @@
                         Console.WriteLine("EL ALUMNO ESTÁ SUSPENSO")
                     End If
                 ElseIf ejercicio = 7 Then
-                    Dim n1, n2, suma As Double
-                    Console.WriteLine("INTRODUZCA EL PRIMER NÚMERO REAL")
-                    n1 = Convert.ToDouble(Console.ReadLine)
-                    Console.WriteLine("INTRODUZCA EL SEGUNDO NÚMERO REAL")
-                    n2 = Convert.ToDouble(Console.ReadLine)
+                    Dim n1, n2, suma, raiz As Double
+
+                    Try
+                        Console.WriteLine("INTRODUZCA EL PRIMER NÚMERO REAL")
+                        n1 = Convert.ToDouble(Console.ReadLine)
+                        Console.WriteLine("INTRODUZCA EL SEGUNDO NÚMERO REAL")
+                        n2 = Convert.ToDouble(Console.ReadLine)
+                    Catch ex As Exception
+                    End Try
                     suma = n1 + n2
                     If suma > 0 Then
-                        Console.WriteLine("La raíz cuadrada de la suma es :")
-                        Console.WriteLine(Math.Sqrt(suma))
+                        raiz = Math.Sqrt(suma)
+                        Console.WriteLine("La raíz cuadrada de la suma es :" & raiz)
                     Else
                         Console.WriteLine("NO SE PUEDE REALIZAR LA RAÍZ")
                     End If
@@ -66,7 +70,7 @@
                         End If
                     Loop While contraseña1 <> contraseña2
                 ElseIf ejercicio = 9 Then
-                    Dim number1, number2, menor, mayor As Integer
+                    Dim number1, number2 As Integer
                     Dim elevado As Integer
 
                     Console.WriteLine("Introduca el primer número")
@@ -75,51 +79,38 @@
                     number2 = Convert.ToInt32(Console.ReadLine)
 
                     If number1 > number2 Then
-                        mayor = number1
+                        elevado = number1 ^ number2
                     Else
-                        menor = number1
+                        elevado = number2 ^ number1
                     End If
-                    If number1 > number2 Then
-                        menor = number2
-                    Else
-                        mayor = number2
-                    End If
-
-                    elevado = Math.Pow(mayor, menor)
-                    Console.WriteLine("El resultado del número mas grande elevado al más pequeño es " & elevado)
+                    Console.WriteLine("El valor del número más grande elevado al más pequeño es : " & elevado)
                 ElseIf ejercicio = 10 Then
                     Dim presión, temperatura As Double
-                    Dim condición As Boolean
 
                     Console.WriteLine("Introduzca la presión ")
                     presión = Convert.ToDouble(Console.ReadLine)
-
-                    If presión > 2 Then
-                        Console.WriteLine("Abrir válvula de seguridad")
-                    End If
-
-                    Console.WriteLine("Introduzca la temperatura ")
+                    Console.WriteLine("Introduzca la temperatura")
                     temperatura = Convert.ToDouble(Console.ReadLine)
 
-                    If temperatura > 500 Then
-                        Console.WriteLine("Reducir la temperatura")
-                    End If
-
-                    condición = presión > 2 And temperatura > 500
-
-                    If condición Then
-                        Console.WriteLine("Abrir válvula de seguridad y reducir la temperatura")
-                    Else
+                    If presión <= 2 And temperatura <= 500 Then
                         Console.WriteLine("Todo está en orden")
+                    ElseIf presión > 2 And temperatura > 500 Then
+                        Console.WriteLine("Abrir válvula de seguridad y reducir temperatura")
+                    Else
+                        If presión > 2 Then
+                            Console.WriteLine("Abrir válvula de seguridad")
+                        End If
+                        If temperatura > 500 Then
+                            Console.WriteLine("Reducir la temperatura")
+                        End If
                     End If
                 ElseIf ejercicio = 11 Then
                     Dim número As Double
-                    Dim condición As Boolean
 
                     Console.WriteLine("Introduzca el número")
                     número = Convert.ToInt32(Console.ReadLine)
-                    condición = Convert.ToBoolean(número Mod 2 And número Mod 3)
-                    If condición = False Then
+
+                    If número Mod 2 = 0 Or número Mod 3 = 0 Then
                         Console.WriteLine("El número es múltiplo de 2 o 3")
                     End If
                 ElseIf ejercicio = 12 Then
@@ -149,6 +140,8 @@
             End If
 
         Loop While ejercicio <> 1
+
+        Console.ReadLine()
 
         Console.ReadLine()
     End Sub
