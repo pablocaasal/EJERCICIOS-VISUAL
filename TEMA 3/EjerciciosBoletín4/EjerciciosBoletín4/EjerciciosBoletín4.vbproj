@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{62FC13E1-A86E-4CCF-8E45-D85D4BD22CD7}</ProjectGuid>
+    <ProjectGuid>{0C9154AF-EC80-4E70-BE5B-C478E8AC590F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>EjerciciosBoletin3Parte2_5sep.Module4</StartupObject>
-    <RootNamespace>EjerciciosBoletin3Parte2_5sep</RootNamespace>
-    <AssemblyName>EjerciciosBoletin3Parte2_5sep</AssemblyName>
+    <StartupObject>EjerciciosBoletín4.Module2</StartupObject>
+    <RootNamespace>EjerciciosBoletín4</RootNamespace>
+    <AssemblyName>EjerciciosBoletín4</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>EjerciciosBoletin3Parte2_5sep.xml</DocumentationFile>
+    <DocumentationFile>EjerciciosBoletín4.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>EjerciciosBoletin3Parte2_5sep.xml</DocumentationFile>
+    <DocumentationFile>EjerciciosBoletín4.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -70,10 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Module1.vb" />
-    <Compile Include="Module2.vb" />
-    <Compile Include="Module3.vb" />
-    <Compile Include="Module4.vb" />
-    <Compile Include="Module5.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
