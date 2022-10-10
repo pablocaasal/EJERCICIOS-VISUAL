@@ -11,6 +11,10 @@
             Console.WriteLine("Abrir válvula de seguridad")
         End If
 
+<<<<<<< HEAD
+=======
+        Console.WriteLine("-----------------------------------------------------")
+>>>>>>> cc10482ca354a14dfe8e65e35e2bc49bd3bc34c1
         Console.WriteLine("Introduzca la temperatura ")
         temperatura = Convert.ToDouble(Console.ReadLine)
 
@@ -21,8 +25,10 @@
         condición = presión > 2 And temperatura > 500
 
         If condición Then
+            Console.WriteLine("-----------------------------------------------------")
             Console.WriteLine("Abrir válvula de seguridad y reducir la temperatura")
         Else
+            Console.WriteLine("-----------------------------------------------------")
             Console.WriteLine("Todo está en orden")
         End If
         Console.ReadLine()

@@ -86,37 +86,31 @@
                     Console.WriteLine("El valor del número más grande elevado al más pequeño es : " & elevado)
                 ElseIf ejercicio = 10 Then
                     Dim presión, temperatura As Double
-                    Dim condición As Boolean
 
                     Console.WriteLine("Introduzca la presión ")
                     presión = Convert.ToDouble(Console.ReadLine)
-
-                    If presión > 2 Then
-                        Console.WriteLine("Abrir válvula de seguridad")
-                    End If
-
-                    Console.WriteLine("Introduzca la temperatura ")
+                    Console.WriteLine("Introduzca la temperatura")
                     temperatura = Convert.ToDouble(Console.ReadLine)
 
-                    If temperatura > 500 Then
-                        Console.WriteLine("Reducir la temperatura")
-                    End If
-
-                    condición = presión > 2 And temperatura > 500
-
-                    If condición = True Then
-                        Console.WriteLine("Abrir válvula de seguridad y reducir la temperatura")
-                    Else
+                    If presión <= 2 And temperatura <= 500 Then
                         Console.WriteLine("Todo está en orden")
+                    ElseIf presión > 2 And temperatura > 500 Then
+                        Console.WriteLine("Abrir válvula de seguridad y reducir temperatura")
+                    Else
+                        If presión > 2 Then
+                            Console.WriteLine("Abrir válvula de seguridad")
+                        End If
+                        If temperatura > 500 Then
+                            Console.WriteLine("Reducir la temperatura")
+                        End If
                     End If
                 ElseIf ejercicio = 11 Then
                     Dim número As Double
-                    Dim condición As Boolean
 
                     Console.WriteLine("Introduzca el número")
                     número = Convert.ToInt32(Console.ReadLine)
-                    condición = Convert.ToBoolean(número Mod 2 And número Mod 3)
-                    If condición = False Then
+
+                    If número Mod 2 = 0 Or número Mod 3 = 0 Then
                         Console.WriteLine("El número es múltiplo de 2 o 3")
                     End If
                 ElseIf ejercicio = 12 Then
