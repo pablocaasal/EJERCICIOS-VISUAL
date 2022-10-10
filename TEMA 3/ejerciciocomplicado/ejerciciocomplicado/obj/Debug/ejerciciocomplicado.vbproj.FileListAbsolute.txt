@@ -1,0 +1,11 @@
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\bin\Debug\ejerciciocomplicado.exe.config
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\bin\Debug\ejerciciocomplicado.exe
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\bin\Debug\ejerciciocomplicado.pdb
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\bin\Debug\ejerciciocomplicado.xml
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\obj\Debug\ejerciciocomplicado.vbproj.AssemblyReference.cache
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\obj\Debug\ejerciciocomplicado.Resources.resources
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\obj\Debug\ejerciciocomplicado.vbproj.GenerateResource.cache
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\obj\Debug\ejerciciocomplicado.vbproj.CoreCompileInputs.cache
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\obj\Debug\ejerciciocomplicado.exe
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\obj\Debug\ejerciciocomplicado.xml
+C:\Users\Pablo\OneDrive\Documentos\GitHub\EJERCICIOS-VISUAL\TEMA 3\ejerciciocomplicado\ejerciciocomplicado\obj\Debug\ejerciciocomplicado.pdb
