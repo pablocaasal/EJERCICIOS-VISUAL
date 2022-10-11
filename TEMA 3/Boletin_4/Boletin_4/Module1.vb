@@ -54,8 +54,30 @@
                     End If
                 End If
                 Console.WriteLine("El menor es : " & menor)
+
             ElseIf numero = 4 Then
+                Console.WriteLine("No hay ejercicio 4, escoge otro")
+
             ElseIf numero = 5 Then
+                'ejercicio 5
+                Dim nota As Double
+
+                Console.WriteLine("Introduzca la nota ")
+                nota = Convert.ToDouble(Console.ReadLine)
+
+                If nota < 0 Or nota > 10 Then
+                    Console.WriteLine("Error al introducir la nota")
+
+                ElseIf nota < 5 Then
+                    Console.WriteLine("Suspenso")
+                ElseIf nota >= 5 And nota < 6.5 Then
+                    Console.WriteLine("Aprobado")
+                ElseIf nota >= 6.5 And nota < 8.5 Then
+                    Console.WriteLine("Notable")
+                ElseIf nota >= 8.5 And nota <= 10 Then
+                    Console.WriteLine("Sobresaliente")
+                End If
+
             ElseIf numero = 6 Then
                 Dim numerox, resultadofinal As Integer
                 Console.WriteLine("Introduzca un número")
@@ -70,11 +92,66 @@
                     End If
                 End If
                 Console.WriteLine("El valor inicial era " & numerox & " y el valor final es " & resultadofinal)
+
             ElseIf numero = 7 Then
-                ElseIf numero = 8 Then
+                'ejercicio 7
+                Dim temp As Double
 
+                Console.WriteLine("Introduzca la temperatura")
+                temp = Convert.ToDouble(Console.ReadLine)
 
+                If temp < 0 Then
+                    Console.WriteLine("SOLIDO")
+                ElseIf temp >= 0 And temp <= 100 Then
+                    Console.WriteLine("Líquido")
+                ElseIf temp > 100 And temp <= 1000000 Then
+                    Console.WriteLine("Vapor")
+                ElseIf temp > 1000000 Then
+                    Console.WriteLine("Plasma")
                 End If
+
+            ElseIf numero = 8 Then
+                Dim opcion As Char
+                Dim num1, num2 As Integer
+                Dim suma As Integer
+                Console.WriteLine("Eliga una opcion:")
+                Console.WriteLine("Opcion a: Sumar")
+                Console.WriteLine("Opción b: Restar")
+                Console.WriteLine("Opcion c: Multiplicar")
+                Console.WriteLine("Opción d: Dividir")
+                Console.WriteLine("Opción e: Raíz de la suma")
+                opcion = CChar(Console.ReadLine)
+
+                Console.WriteLine("Introduzca el primer número")
+                num1 = Convert.ToInt32(Console.ReadLine)
+                Console.WriteLine("Introduzca el segundo número")
+                num2 = Convert.ToInt32(Console.ReadLine)
+
+                Select Case opcion
+                    Case "a"c
+                        suma = num1 + num2
+                        Console.WriteLine("El resultado de la suma es " & suma)
+                    Case "b"c
+                        Dim resta As Integer
+                        resta = num1 - num2
+                        Console.WriteLine("El resultado de la resta es " & resta)
+                    Case "c"c
+                        Dim multiplicación As Integer
+                        multiplicación = num1 * num2
+                        Console.WriteLine("El resultado de la multiplicación es " & multiplicación)
+                    Case "d"c
+                        Dim division As Double
+                        division = num1 / num2
+                        Console.WriteLine("El resultado de la división es " & division)
+                    Case "e"c
+                        Dim raiz As Double
+                        raiz = Math.Sqrt(num1 + num2)
+                        Console.WriteLine("El resultado de la raiz de la suma es " & raiz)
+                End Select
+
+            ElseIf numero = 9 Then
+
+            End If
 
 
         Loop While numero <> 1
