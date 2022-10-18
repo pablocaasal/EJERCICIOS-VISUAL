@@ -194,44 +194,171 @@
                 End If
 
                 Console.WriteLine("El precio de los tres artículos, con descuento incluido, es : " & suma)
-            ElseIf numero = 14 Then
-                Dim numero14 As Integer
-                Console.WriteLine("Introduzca un número positivo")
-                numero14 = Convert.ToInt32(Console.ReadLine)
-                If numero14 > 0 And numero14 < 10 Then
-                    Console.WriteLine("El número tiene 1 cifra")
-                ElseIf numero14 < 100 Then
-                    Console.WriteLine("El número tiene 2 cifras")
-                ElseIf numero14 < 1000 Then
-                    Console.WriteLine("El número tiene 3 cifras")
-                ElseIf numero14 < 10000 Then
-                    Console.WriteLine("El número tiene 4 cifras")
-                ElseIf numero14 < 100000 Then
-                    Console.WriteLine("El número tiene 5 cifras")
-                ElseIf numero14 < 1000000 Then
-                    Console.WriteLine("El número tiene 6 cifras")
-                ElseIf numero14 >= 1000000 Then
-                    Console.WriteLine("El número tiene más de 6 cifras")
-                End If
-            ElseIf numero = 15 Then
-                Dim a, b, c, x1, x2 As Double
-                Console.WriteLine("Introduce el primer coeficiente (a)")
-                a = Convert.ToDouble(Console.ReadLine)
-                Console.WriteLine("Introduce el segundo coeficiente (b)")
-                b = Convert.ToDouble(Console.ReadLine)
-                Console.WriteLine("Introduce el tercer coeficiente (c)")
-                c = Convert.ToDouble(Console.ReadLine)
-                If a = 0 Then
-                    x1 = -(c / b)
-                    Console.WriteLine("x= " & x1)
-                End If
-                If b = 0 Then
-                    x1 = Math.Sqrt(-c / a)
-                    Console.WriteLine("x1 = +" & x1)
-                    x2 = Math.Sqrt(-c / a)
-                    Console.WriteLine("x2 = -" & x2)
 
+            ElseIf numero = 11 Then
+                Dim tasaXhora, horasTrabajadas, salarioBruto, salarioNeto As Double
+                Console.WriteLine("Introduzca las horas trabajadas")
+                horasTrabajadas = Convert.ToDouble(Console.ReadLine)
+                Console.WriteLine("Introduzca la tasa por hora")
+                tasaXhora = Convert.ToDouble(Console.ReadLine)
+
+                If horasTrabajadas <= 38 Then
+                    salarioBruto = horasTrabajadas * tasaXhora
+                Else
+                    salarioBruto = horasTrabajadas * ((tasaXhora * 0.5) + tasaXhora)
                 End If
+
+                If salarioBruto <= 300 Then
+                    salarioNeto = salarioBruto
+                Else
+                    salarioNeto = salarioBruto - (salarioBruto * 0.1)
+                End If
+                Console.WriteLine("El salario bruto es " & salarioBruto)
+                Console.WriteLine("El salario neto es " & salarioNeto)
+
+            ElseIf numero = 12 Then
+                    Dim indicador As Byte
+                    Console.WriteLine("Introduzca el indicador")
+                    Console.WriteLine("1 para calor")
+                    Console.WriteLine("2 para templado")
+                    Console.WriteLine("3 para frio")
+                    Console.WriteLine("4 fuera de rango")
+                    indicador = Convert.ToByte(Console.ReadLine)
+
+                    Select Case indicador
+                        Case 1
+                            Console.WriteLine("Calor")
+                        Case 2
+                            Console.WriteLine("Templado")
+                        Case 3
+                            Console.WriteLine("Frio")
+                        Case 4
+                            Console.WriteLine("Fuera de rango")
+                    End Select
+
+                ElseIf numero = 13 Then
+                    Dim color As Char
+                    Console.WriteLine("Introduzca un color ")
+                    Console.WriteLine("r/R-->Rojo ")
+                    Console.WriteLine("v/V-->Verde ")
+                    Console.WriteLine("a/A-->Azul ")
+                    Console.WriteLine("Otro caracter-->Negro ")
+                    color = CChar(Console.ReadLine)
+
+                    Select Case color
+                        Case "r"c, "R"c
+                            Console.WriteLine("Rojo")
+                        Case "v"c, "V"c
+                            Console.WriteLine("Verde")
+                        Case "a"c, "A"c
+                            Console.WriteLine("Azul")
+                        Case <> "r"c, "R"c, <> "v"c, "V"c, <> "a"c, "A"c
+                            Console.WriteLine("Negro")
+                    End Select
+
+                ElseIf numero = 14 Then
+                    Dim numero14 As Integer
+                    Console.WriteLine("Introduzca un número positivo")
+                    numero14 = Convert.ToInt32(Console.ReadLine)
+                    If numero14 > 0 And numero14 < 10 Then
+                        Console.WriteLine("El número tiene 1 cifra")
+                    ElseIf numero14 < 100 Then
+                        Console.WriteLine("El número tiene 2 cifras")
+                    ElseIf numero14 < 1000 Then
+                        Console.WriteLine("El número tiene 3 cifras")
+                    ElseIf numero14 < 10000 Then
+                        Console.WriteLine("El número tiene 4 cifras")
+                    ElseIf numero14 < 100000 Then
+                        Console.WriteLine("El número tiene 5 cifras")
+                    ElseIf numero14 < 1000000 Then
+                        Console.WriteLine("El número tiene 6 cifras")
+                    ElseIf numero14 >= 1000000 Then
+                        Console.WriteLine("El número tiene más de 6 cifras")
+                    End If
+
+                ElseIf numero = 15 Then
+                    Dim a, b, c, x, x1, x2 As Double
+                    Console.WriteLine("Introduce el primer coeficiente (a)")
+                    a = Convert.ToDouble(Console.ReadLine)
+                    Console.WriteLine("Introduce el segundo coeficiente (b)")
+                    b = Convert.ToDouble(Console.ReadLine)
+                    Console.WriteLine("Introduce el tercer coeficiente (c)")
+                    c = Convert.ToDouble(Console.ReadLine)
+                    If a = 0 Then
+                        x = -(c / b)
+                        Console.WriteLine("x= " & x1)
+                    End If
+                    If b = 0 Then
+                        x1 = Math.Sqrt(-c / a)
+                        Console.WriteLine("x1 = +" & x1)
+                        x2 = Math.Sqrt(-c / a)
+                        Console.WriteLine("x2 = -" & x2)
+                    End If
+                    If c = 0 Then
+                        x1 = 0
+                        Console.WriteLine("x1=" & x1)
+                        x2 = -(b / a)
+                        Console.WriteLine("x2= " & x2)
+                    End If
+                    If a <> 0 And b <> 0 And c <> 0 Then
+                        x1 = ((-b) + Math.Sqrt(Math.Pow(b, 2) - 4 * a * c)) / 2 * a
+                        Console.WriteLine("x1=" & x1)
+                        x2 = ((-b) - Math.Sqrt(Math.Pow(b, 2) - 4 * a * c)) / 2 * a
+                        Console.WriteLine("x2=" & x2)
+                    End If
+
+                ElseIf numero = 16 Then
+                    Dim año As Integer
+                    Console.WriteLine("Introduzca un año")
+                    año = Convert.ToInt32(Console.ReadLine)
+
+                    If año Mod 4 = 0 Then
+                        Console.WriteLine("El año es bisiesto")
+                    ElseIf año Mod 100 = 0 And año Mod 400 = 0 Then
+                        Console.WriteLine("El año es bisiesto")
+                    Else
+                        Console.WriteLine("El año no es bisiesto")
+                    End If
+
+                ElseIf numero = 17 Then
+                    Dim numeros1, numeros2, numeros3 As Integer
+
+                Console.WriteLine("Introduzca el primer número")
+                numeros1 = Convert.ToInt32(Console.ReadLine)
+                Console.WriteLine("Introduzca el segundo número")
+                numeros2 = Convert.ToInt32(Console.ReadLine)
+                Console.WriteLine("Introduzca el tercer número")
+                numeros3 = Convert.ToInt32(Console.ReadLine)
+
+                If numeros1 < numeros2 Then
+                    If numeros1 < numeros3 Then
+                        Console.WriteLine("El menor es " & numeros1)
+                    Else
+                        Console.WriteLine("El menor es " & numeros3)
+                    End If
+                Else
+                    If numeros2 < numeros3 Then
+                        Console.WriteLine("El menor es " & numeros2)
+                    Else
+                        Console.WriteLine("El menor es " & numeros3)
+                    End If
+                End If
+
+                If numeros1 > numeros2 Then
+                    If numeros1 > numeros3 Then
+                        Console.WriteLine("El mayor es " & numeros1)
+                    Else
+                        Console.WriteLine("El mayor es " & numeros3)
+                    End If
+                Else
+                    If numeros2 > numeros3 Then
+                        Console.WriteLine("El mayor es " & numeros2)
+                    Else
+                        Console.WriteLine("El mayor es " & numeros3)
+                    End If
+                End If
+                Console.WriteLine("Por lo tanto el número restante es el del medio")
+
             End If
 
 
@@ -241,3 +368,4 @@
     End Sub
 
 End Module
+
