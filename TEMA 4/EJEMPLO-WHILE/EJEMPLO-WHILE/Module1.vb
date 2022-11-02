@@ -21,6 +21,13 @@
             Console.WriteLine(i2)
         End While
         Console.ReadLine()
+
+        Dim i3 As Integer
+        While (i3 < 1000)
+            i3 += 1
+            Console.WriteLine(i3)
+        End While
+        Console.ReadLine()
     End Sub
 
 End Module

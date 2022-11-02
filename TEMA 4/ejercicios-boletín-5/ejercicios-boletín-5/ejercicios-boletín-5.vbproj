@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9B4DF41B-463F-4D09-9A85-9354B00E62F8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ejercicios_boletín_5.Module4</StartupObject>
+    <StartupObject>ejercicios_boletín_5.Module10</StartupObject>
     <RootNamespace>ejercicios_boletín_5</RootNamespace>
     <AssemblyName>ejercicios-boletín-5</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -70,9 +70,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Module1.vb" />
+    <Compile Include="Module10.vb" />
     <Compile Include="Module2.vb" />
     <Compile Include="Module3.vb" />
     <Compile Include="Module4.vb" />
+    <Compile Include="Module5.vb" />
+    <Compile Include="Module6.vb" />
+    <Compile Include="Module7.vb" />
+    <Compile Include="Module8.vb" />
+    <Compile Include="Module9.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
