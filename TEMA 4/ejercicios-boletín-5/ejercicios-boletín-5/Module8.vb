@@ -7,8 +7,8 @@
         contador = 0
 
         While contador <= 5
-            cuadrado = Math.Pow(numero, 2)
-            cubo = Math.Pow(numero, 3)
+            cuadrado = Convert.ToInt32(Math.Pow(numero, 2))
+            cubo = Convert.ToInt32(Math.Pow(numero, 3))
             Console.WriteLine("Numero:" & numero & " Cuadrado:" & cuadrado & " Cubo:" & cubo)
             numero += 1
             contador += 1
@@ -16,8 +16,8 @@
         Console.ReadLine()
 
         For i = numero To numero + 5
-            cuadrado = Math.Pow(i, 2)
-            cubo = Math.Pow(i, 3)
+            cuadrado = Convert.ToInt32(Math.Pow(i, 2))
+            cubo = Convert.ToInt32(Math.Pow(i, 3))
             Console.WriteLine("Numero:" & i & " Cuadrado:" & cuadrado & " Cubo:" & cubo)
         Next
         Console.ReadLine()

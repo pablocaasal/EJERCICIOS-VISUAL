@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9B4DF41B-463F-4D09-9A85-9354B00E62F8}</ProjectGuid>
+    <ProjectGuid>{D7107738-C8FD-4A0C-B71A-2C3F382FD3EB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ejercicios_boletín_5.Module19</StartupObject>
-    <RootNamespace>ejercicios_boletín_5</RootNamespace>
-    <AssemblyName>ejercicios-boletín-5</AssemblyName>
+    <StartupObject>ejerciciosBuclesanidados.Module1</StartupObject>
+    <RootNamespace>ejerciciosBuclesanidados</RootNamespace>
+    <AssemblyName>ejerciciosBuclesanidados</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,10 +22,8 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ejercicios-boletín-5.xml</DocumentationFile>
-    <NoWarn>
-    </NoWarn>
-    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <DocumentationFile>ejerciciosBuclesanidados.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,10 +32,8 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ejercicios-boletín-5.xml</DocumentationFile>
-    <NoWarn>
-    </NoWarn>
-    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <DocumentationFile>ejerciciosBuclesanidados.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -46,7 +42,7 @@
     <OptionCompare>Binary</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionStrict>On</OptionStrict>
+    <OptionStrict>Off</OptionStrict>
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
@@ -74,25 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Module1.vb" />
-    <Compile Include="Module10.vb" />
-    <Compile Include="Module11.vb" />
-    <Compile Include="Module12.vb" />
-    <Compile Include="Module13.vb" />
-    <Compile Include="Module14.vb" />
-    <Compile Include="Module15.vb" />
-    <Compile Include="Module16.vb" />
-    <Compile Include="Module17.vb" />
-    <Compile Include="Module18.vb" />
-    <Compile Include="Module19.vb" />
-    <Compile Include="Module2.vb" />
-    <Compile Include="Module20.vb" />
-    <Compile Include="Module3.vb" />
-    <Compile Include="Module4.vb" />
-    <Compile Include="Module5.vb" />
-    <Compile Include="Module6.vb" />
-    <Compile Include="Module7.vb" />
-    <Compile Include="Module8.vb" />
-    <Compile Include="Module9.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
