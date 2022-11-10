@@ -5,16 +5,18 @@
 
         Console.WriteLine("Introduce un número")
         numero = Convert.ToInt32(Console.ReadLine)
-        For B = 1 To numero
-            For i = 1 To numero - 1
-                If numero Mod i = 0 Then
-                    suma += i
-                    If suma = numero Then
-                        Console.WriteLine(numero & " es un número perfecto")
-                    End If
-                End If
+
+        For I = 1 To numero - 1
+            If numero Mod I = 0 Then
+                suma += I
+            End If
+            For B = 1 To I
+                While suma = 6
+                    Console.WriteLine(suma)
+                End While
             Next
         Next
+
         Console.ReadLine()
     End Sub
 End Module
