@@ -11,7 +11,9 @@
         Next
         Console.ReadLine()
 
-        Console.WriteLine("-----------------------")
+        Console.WriteLine("")
+        Console.WriteLine("")
+        Console.WriteLine("")
 
         'apartado b
         For i = 1 To 5
@@ -22,7 +24,9 @@
         Next
         Console.ReadLine()
 
-        Console.WriteLine("-----------------------")
+        Console.WriteLine("")
+        Console.WriteLine("")
+        Console.WriteLine("")
 
         'apartado c
         For i = 1 To 5
@@ -38,6 +42,10 @@
             Next
         Next
         Console.ReadLine()
+
+        Console.WriteLine("")
+        Console.WriteLine("")
+        Console.WriteLine("")
 
         'Apartado d
         For i = 7 To 1 Step -1
