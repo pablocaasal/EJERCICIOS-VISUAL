@@ -1,10 +1,10 @@
 ﻿Module Module8
     Sub Main()
-        'ejercicio 26
+        'ejercicio 26 comparar dos arrays sin funciones
 
         Dim array(4) As Integer
         Dim array2(4) As Integer
-        Dim valoresDistintos
+        Dim valoresDistintos = 0
 
         Console.WriteLine("Cuidado! Tienes que introducir cada posición 2 veces, una vez para la primera array y otra para la segunda")
         Console.WriteLine(" ")

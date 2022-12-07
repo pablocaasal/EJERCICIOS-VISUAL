@@ -14,7 +14,8 @@
             Dim posicion As Double = Array.BinarySearch(matriz, n)
 
             If posicion < 0 Then
-
+                Console.WriteLine("No se ha encontrado ningún número mayor que 1000")
+                Exit For
             Else
                 Console.WriteLine("")
                 Console.WriteLine(n & " es el primer número mayor que 1000 y está en la posición " & posicion)
