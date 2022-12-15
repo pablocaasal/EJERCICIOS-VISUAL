@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A91DB6BA-BABD-48DB-9C88-942123C7F2AA}</ProjectGuid>
+    <ProjectGuid>{8E4257CD-BE2A-4E5C-8C59-573E1429D9EA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>BOLETÍN5_PARTE2_19_X.Module12</StartupObject>
-    <RootNamespace>BOLETÍN5_PARTE2_19_X</RootNamespace>
-    <AssemblyName>BOLETÍN5_PARTE2_19-X</AssemblyName>
+    <StartupObject>Boletin5ParaNota.CasalRomeroPablo</StartupObject>
+    <RootNamespace>Boletin5ParaNota</RootNamespace>
+    <AssemblyName>Boletin5ParaNota</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,8 +22,10 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>BOLETÍN5_PARTE2_19-X.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DocumentationFile>Boletin5ParaNota.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,8 +34,10 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>BOLETÍN5_PARTE2_19-X.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DocumentationFile>Boletin5ParaNota.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -42,7 +46,7 @@
     <OptionCompare>Binary</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionStrict>Off</OptionStrict>
+    <OptionStrict>On</OptionStrict>
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
@@ -69,18 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
-    <Compile Include="Module10.vb" />
-    <Compile Include="Module11.vb" />
-    <Compile Include="Module12.vb" />
-    <Compile Include="Module2.vb" />
-    <Compile Include="Module3.vb" />
-    <Compile Include="Module4.vb" />
-    <Compile Include="Module5.vb" />
-    <Compile Include="Module6.vb" />
-    <Compile Include="Module7.vb" />
-    <Compile Include="Module8.vb" />
-    <Compile Include="Module9.vb" />
+    <Compile Include="CasalRomeroPablo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

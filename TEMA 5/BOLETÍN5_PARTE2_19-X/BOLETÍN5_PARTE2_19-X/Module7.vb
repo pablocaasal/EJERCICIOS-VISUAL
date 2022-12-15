@@ -54,36 +54,28 @@
                 Console.WriteLine("El menor es " & menor)
 
             Case 3
-                Dim array(4) As Integer
-                Dim menor, contador As Integer
+                Dim array() As Integer = {5, 4, 3, 2, 1}
+                Dim listaNumeros As Integer() = New Integer(array.Length - 1) {}
+                Dim salvarNum As Integer
 
                 For i = 0 To array.Length - 1
-                    Console.WriteLine("Introduce la posición " & i)
-                    array(i) = Convert.ToInt32(Console.ReadLine)
+                    listaNumeros(i) = array(i)
                 Next
 
-                For n = 0 To array.Length - 1
-
-                    If contador = array.Length - 1 Then
-                        Exit For
-                    End If
-
-                    menor = array(n)
-
-                    If menor < array(n + 1) Then
-                        menor = array(n)
-                        contador += 1
-                    Else
-                        menor = array(n + 1)
-                        contador += 1
-                    End If
-
-                    array(n) = menor
+                For a = 0 To array.Length - 2
+                    For b = 0 To array.Length - 2
+                        If (listaNumeros(b) > listaNumeros(b * +1)) Then
+                            salvarNum = listaNumeros(b)
+                            listaNumeros(b) = listaNumeros(b + 1)
+                            listaNumeros(b + 1) = salvarNum
+                        End If
+                    Next
                 Next
 
-                For i = 0 To array.Length - 1
-                    Console.WriteLine(array(i))
-                Next
+                Console.WriteLine(listaNumeros)
+                Console.WriteLine(salvarNum)
+                Console.WriteLine(array)
+
         End Select
 
         Console.ReadLine()

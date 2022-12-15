@@ -1,6 +1,6 @@
 ﻿Module Module11
     Sub Main()
-        'ejericico 28 copia arrary con funcion
+        'ejericico 28 copia arrary con funcion copy
 
         Dim arrayOriginal(4) As Integer
         Dim copiaArray(4) As Integer
