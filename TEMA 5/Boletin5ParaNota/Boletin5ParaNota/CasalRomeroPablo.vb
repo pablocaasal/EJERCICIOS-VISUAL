@@ -504,8 +504,37 @@
 
                 Case 12
 
-                    'Almacenar 25 números aleatorios  en un array .
-                    'Mostrar por pantalla los valores de la matriz situando un * delante de aquellos valores que aparezcan repetidos más de una vez.
+                    Dim array(24) As Integer
+                    Dim array2(24) As Integer
+                    Dim random As New Random
+                    Dim contador As Integer
+
+                    For i = 0 To array.Length - 1
+                        array(i) = random.Next(0, 11)
+                        Console.WriteLine("El valor de la posición " & i & " es " & array(i))
+                    Next
+
+                    Console.WriteLine("")
+                    Console.WriteLine("Valores repetidos :")
+
+                    For n = 0 To 25
+
+                        contador = 0
+                        For b = 0 To array.Length - 1
+                            If array(b) = n Then
+
+                                contador += 1
+                            End If
+
+                            If contador > 1 Then
+                                Console.WriteLine("* " & n)
+
+                                Exit For
+
+                            End If
+                        Next
+                    Next
+
 
             End Select
 
