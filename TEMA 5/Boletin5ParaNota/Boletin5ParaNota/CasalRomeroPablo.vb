@@ -72,6 +72,7 @@
                     Dim capacidad As Integer = 0
                     Dim media As Double = 0
                     Dim mediaDesviación As Double = 0
+                    Dim DesviaciónMediaDesviaciones As Double = 0
                     Dim ramdom As New Random
 
                     Console.WriteLine("Introduce la capacidad de la array")
@@ -109,6 +110,16 @@
                     mediaDesviación = mediaDesviación / capacidad
                     Console.WriteLine(" ")
                     Console.WriteLine("La media de las desviaciones es " & mediaDesviación)
+
+                    DesviaciónMediaDesviaciones = mediaDesviación - media
+
+                    If DesviaciónMediaDesviaciones < 0 Then
+                        DesviaciónMediaDesviaciones = (mediaDesviación - media) * -1
+                        Console.WriteLine("La desviación de la media de las desviaciones es " & DesviaciónMediaDesviaciones)
+                    Else
+                        Console.WriteLine("La desviación de la media de las desviaciones es " & DesviaciónMediaDesviaciones)
+
+                    End If
 
                 Case 3
                     'Declarar dos arrays de 5 elementos, pedir los datos del primero por teclado al usuario.
@@ -202,6 +213,7 @@
 
                     Dim array(4) As Integer
                     Dim contador As Integer = 0
+                    Dim numero As Integer
 
                     For i = 0 To array.Length - 1
                         Console.WriteLine("Introduce el valor de la posición " & i)
@@ -209,6 +221,9 @@
                     Next
 
                     Console.WriteLine(" ")
+                    Console.WriteLine("Introduce el número que quieres buscar")
+                    numero = Convert.ToInt32(Console.ReadLine)
+                    Console.WriteLine("")
 
                     For v = 0 To array.Length - 1
                         Console.WriteLine("El valor de la posición " & v & " es " & array(v))
@@ -218,15 +233,15 @@
 
 
                     For n = 0 To array.Length - 1
-                        If array(n) = 3 Then
-                            Console.WriteLine("El valor buscado (3) está en la posición " & n)
+                        If array(n) = numero Then
+                            Console.WriteLine("El valor buscado (" & numero & ") está en la posición " & n)
                         Else
                             contador += 1
                         End If
                     Next
 
                     If contador = array.Length Then
-                        Console.WriteLine("No se ha encontrado el valor buscado (3) en ninguna posición")
+                        Console.WriteLine("No se ha encontrado el valor buscado (" & numero & ") en ninguna posición")
                     End If
 
                 Case 7
@@ -237,7 +252,7 @@
                     Dim ramdom As New Random
 
                     Console.WriteLine("Introduce una opción para el ejercicio")
-                    Console.WriteLine("1-Introducir nombres")
+                    Console.WriteLine("1-Introducir nombres y guardarlo en la primera posición vacía")
                     Console.WriteLine("2-Mostrar nombres")
                     Console.WriteLine("3-Contar nombres")
                     Console.WriteLine("4-Mostrar espacio")
@@ -326,9 +341,17 @@
                                     Console.WriteLine(nombre & " está en la posición " & i)
 
                                     array(i) = Nothing
+
                                     Console.WriteLine("")
                                     Console.WriteLine("La posición " & i & " ahora está vacía")
+                                    Console.WriteLine("")
                                 End If
+                            Next
+
+                            array.Sort(array)
+
+                            For n = 0 To array.Length - 1
+                                Console.WriteLine(array(n) & " está en la posición " & n)
                             Next
 
                         Case 7
@@ -503,9 +526,10 @@
                     Console.WriteLine("Hay " & contador2 & " números primos dentro de la array")
 
                 Case 12
+                    'Almacenar 25 números aleatorios  en un array . Mostrar por pantalla los valores de la matriz situando un * delante de aquellos valores que aparezcan repetidos más de una vez.
+
 
                     Dim array(24) As Integer
-                    Dim array2(24) As Integer
                     Dim random As New Random
                     Dim contador As Integer
 
@@ -515,15 +539,20 @@
                     Next
 
                     Console.WriteLine("")
-                    Console.WriteLine("Valores repetidos :")
 
                     For n = 0 To 25
-
                         contador = 0
+
+                        If n = 25 Then
+
+                        Else
+                            Console.WriteLine("El valor de la posición " & n & " es " & array(n))
+                        End If
+
                         For b = 0 To array.Length - 1
                             If array(b) = n Then
-
                                 contador += 1
+
                             End If
 
                             If contador > 1 Then
@@ -534,7 +563,6 @@
                             End If
                         Next
                     Next
-
 
             End Select
 
