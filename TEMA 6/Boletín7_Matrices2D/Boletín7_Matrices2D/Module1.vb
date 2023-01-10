@@ -622,6 +622,33 @@
                         Console.WriteLine("La matriz no es cuadrada")
                     End If
 
+                Case 15
+
+                    'Rellenar una matriz con 25 valores aleatorios entre -5 y 5.
+                    'Mostrar por pantalla aquellos valores de la matriz que no están repetidos.
+
+                    Dim matriz(4, 4) As Integer
+                    Dim random As New Random
+
+                    For i = 0 To matriz.GetUpperBound(0)
+                        Console.WriteLine()
+
+                        For o = 0 To matriz.GetUpperBound(1)
+
+                            matriz(i, o) = random.Next(-5, 6)
+
+                            Console.Write(matriz(i, o))
+                        Next
+
+                    Next
+
+                    For i = 0 To matriz.GetUpperBound(0) - 1
+
+                        For o = 0 To matriz.GetUpperBound(1) - 1
+
+
+                        Next
+                    Next
 
 
             End Select
