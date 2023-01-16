@@ -162,13 +162,11 @@
                         Next
                     Next
 
-                    porcentaje = (contador / 9) * 100
+                    porcentaje = (contador / matriz.Length) * 100
 
                     Console.WriteLine("")
                     Console.WriteLine("")
                     Console.WriteLine("Hay un " & porcentaje & "% de ceros")
-
-                    Console.ReadLine()
 
                 Case 5
 
@@ -211,6 +209,36 @@
                             Console.Write(matriz2(I, n) & " ")
                         Next
                     Next
+
+                    'comprobar si es simetrica
+
+                    Dim difernte As Boolean = False
+
+                    For I = 0 To matriz.GetUpperBound(0)
+
+                        For j = 0 To matriz.GetUpperBound(1)
+
+                            If matriz(I, j) <> matriz2(I, j) Then
+
+                                difernte = True
+
+                                Exit For
+                            End If
+                        Next
+
+                        If difernte = True Then
+                            Exit For
+                        End If
+
+                    Next
+
+                    Console.WriteLine("")
+
+                    If difernte = True Then
+                        Console.WriteLine("No es simétrica")
+                    Else
+                        Console.WriteLine("Es simétrica")
+                    End If
 
                 Case 6
 
@@ -272,8 +300,9 @@
 
                     Dim matriz(2, 2) As Integer
                     Dim random As New Random
-                    Dim menor, mayor As Integer
+                    Dim menor, mayor, posicionFila, posicionColumna, posicionFilaMayor, PosicionColumnaMayor As Integer
                     Dim media, desviaciónMenor, desviaciónMayor As Double
+
 
                     For i = 0 To matriz.GetUpperBound(0)
                         Console.WriteLine("")
@@ -296,16 +325,17 @@
 
                     menor = matriz(0, 0)
 
-                    For u = 0 To matriz.GetUpperBound(0) - 1
+                    For u = 0 To matriz.GetUpperBound(0)
 
-                        For l = 0 To matriz.GetUpperBound(1) - 1
+                        For l = 0 To matriz.GetUpperBound(1)
 
 
-                            If menor < matriz(u + 1, l + 1) Then
+                            If menor < matriz(u, l) Then
 
                             Else
-                                menor = matriz(u + 1, l + 1)
-
+                                menor = matriz(u, l)
+                                posicionFila = u
+                                posicionColumna = l
                             End If
                         Next
                     Next
@@ -317,18 +347,19 @@
                     End If
 
                     Console.WriteLine()
-                    Console.WriteLine("El menor es " & menor & " y su desviación frente a la media es " & desviaciónMenor)
+                    Console.WriteLine("El menor es " & menor & " , está en la posición " & posicionFila & "," & posicionColumna & " y su desviación frente a la media es " & desviaciónMenor)
 
                     mayor = matriz(0, 0)
 
-                    For u = 0 To matriz.GetUpperBound(0) - 1
+                    For u = 0 To matriz.GetUpperBound(0)
 
-                        For l = 0 To matriz.GetUpperBound(1) - 1
+                        For l = 0 To matriz.GetUpperBound(1)
 
+                            If mayor < matriz(u, l) Then
 
-                            If mayor < matriz(u + 1, l + 1) Then
-
-                                mayor = matriz(u + 1, l + 1)
+                                mayor = matriz(u, l)
+                                posicionFilaMayor = u
+                                PosicionColumnaMayor = l
 
                             End If
                         Next
@@ -341,7 +372,7 @@
                     End If
 
                     Console.WriteLine()
-                    Console.WriteLine("El mayor es " & mayor & " y su desviación frente a la media es " & desviaciónMayor)
+                    Console.WriteLine("El mayor es " & mayor & " , está en la posición " & posicionFilaMayor & "," & PosicionColumnaMayor & " y su desviación frente a la media es " & desviaciónMayor)
 
                 Case 9
 
@@ -629,6 +660,7 @@
 
                     Dim matriz(4, 4) As Integer
                     Dim random As New Random
+                    Dim contador As Integer
 
                     For i = 0 To matriz.GetUpperBound(0)
                         Console.WriteLine()
@@ -637,25 +669,100 @@
 
                             matriz(i, o) = random.Next(-5, 6)
 
-                            Console.Write(matriz(i, o))
+                            Console.Write(matriz(i, o) & " ")
                         Next
 
                     Next
 
-                    For i = 0 To matriz.GetUpperBound(0) - 1
+                    Console.WriteLine()
 
-                        For o = 0 To matriz.GetUpperBound(1) - 1
+                    For k = -5 To 5
 
+                        contador = 0
 
+                        For i = 0 To matriz.GetUpperBound(0)
+
+                            For o = 0 To matriz.GetUpperBound(1)
+
+                                If k = matriz(i, o) Then
+
+                                    contador += 1
+                                End If
+                            Next
+                        Next
+
+                        If contador < 2 And contador > 0 Then
+                            Console.WriteLine()
+                            Console.WriteLine(k)
+                        End If
+                    Next
+
+                Case 16
+
+                    'El programa debe llenar una matriz 5x5 con números generados aleatoriamente, menos 3 posiciones que son llenadas con el número 0.
+                    'A continuación se va solicitando al usuario que introduzca las coordenadas donde cree que hay un cero.
+                    'El usuario tiene 6 vidas cada vez que falla se le resta una.
+
+                    Dim matriz(4, 4) As Integer
+                    Dim random As New Random
+                    Dim fila, columna As Integer
+                    Dim contador As Integer = 6
+                    Dim ganar As Boolean = False
+                    Dim perder As Boolean = False
+                    Dim otraPartida As Char
+
+                    For i = 0 To matriz.GetUpperBound(0)
+
+                        For o = 0 To matriz.GetUpperBound(1)
+
+                            matriz(i, o) = random.Next(-5, 6)
                         Next
                     Next
 
+                    matriz(0, 4) = 0
+                    matriz(4, 2) = 0
+                    matriz(2, 2) = 0
+
+                    Do
+                        contador = 6
+                        ganar = False
+                        perder = False
+
+                        Do
+                            Console.WriteLine("Introduce la fila donde crees que está el 0. Recuerda que solo puedes introducir un número de 0 a 4")
+                            fila = Convert.ToInt32(Console.ReadLine)
+
+                            Console.WriteLine("Introduce la columna donde crees que está el 0. Recuerda que solo puedes introducir un número de 0 a 4")
+                            columna = Convert.ToInt32(Console.ReadLine)
+
+                            If matriz(fila, columna) = 0 Then
+
+                                Console.WriteLine()
+                                Console.WriteLine("Felicidades, has ganado ! El 0 estaba en " & fila & "," & columna)
+                                ganar = True
+
+                            Else
+
+                                contador -= 1
+                                Console.WriteLine("")
+                                Console.WriteLine("Has perdido :( Pero tienes " & contador & " intentos más")
+                                Console.WriteLine()
+
+                            End If
+
+
+                        Loop Until ganar = True Or contador = 0
+
+                        Console.WriteLine("Quieres jugar otra partida ? {S/N}")
+                        otraPartida = CChar(Console.ReadLine)
+
+                    Loop While otraPartida = "S"c Or otraPartida = "s"c
 
             End Select
 
             Console.WriteLine("")
             Console.WriteLine("Quieres ejecutar otro ejercicio ? (S/N)")
-            continuar = Console.ReadLine
+            continuar = CChar(Console.ReadLine)
 
             Console.WriteLine("")
 

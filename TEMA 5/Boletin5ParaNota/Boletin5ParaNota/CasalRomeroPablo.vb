@@ -564,6 +564,79 @@
                         Next
                     Next
 
+                Case 13
+
+                    Dim matriz(4) As Integer
+                    Dim random As New Random
+                    Dim valor As Integer
+                    Dim contador, contador2 As Integer
+
+                    Console.WriteLine("Introduce el valor")
+                    valor = Convert.ToInt32(Console.ReadLine)
+
+                    Console.WriteLine("")
+
+                    For i = 0 To matriz.Length - 1
+                        matriz(i) = random.Next(0, 6)
+                        Console.WriteLine("")
+                        Console.WriteLine(matriz(i))
+                    Next
+
+                    Console.WriteLine("")
+
+                    For y = 0 To matriz.Length - 1
+
+                        If contador = matriz(y) Or contador2 = matriz(y) Then
+                            Exit For
+                        End If
+
+                        For u = 0 To matriz.Length - 1
+
+                            If matriz(y) + matriz(u) = valor Then
+                                Console.WriteLine(matriz(y) & "+" & matriz(u))
+                                contador = matriz(y)
+                                contador2 = matriz(u)
+                            End If
+
+                            If matriz(y) - matriz(u) = valor Then
+                                Console.WriteLine(matriz(y) & "-" & matriz(u))
+                                contador = matriz(y)
+                                contador2 = matriz(u)
+                            End If
+
+                        Next
+
+                    Next
+
+                Case 14
+
+                    Dim valorMenor As Integer
+                    Dim valorMayor As Integer
+                    Dim n As Integer
+
+                    Console.WriteLine("Introduce el valor menor")
+                    valorMenor = Convert.ToInt32(Console.ReadLine)
+
+                    Console.WriteLine("Introduce el valor mayor")
+                    valorMayor = Convert.ToInt32(Console.ReadLine)
+
+                    n = valorMayor - valorMenor
+
+                    Dim matriz(n) As Integer
+
+                    For i = 0 To n
+                        For o = valorMenor To valorMayor
+                            matriz(i) = o
+                            valorMenor += 1
+                            Exit For
+                        Next
+                    Next
+
+                    For u = 0 To matriz.Length - 1
+                        Console.WriteLine()
+                        Console.WriteLine(matriz(u))
+                    Next
+
             End Select
 
             Console.WriteLine(" ")
