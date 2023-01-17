@@ -1,4 +1,4 @@
-﻿Module Module1
+﻿Module CasalRomeroPablo
 
     Sub Main()
 
@@ -18,7 +18,7 @@
                     'Declarar una matriz 3 X 3 y darle valores en la declaración. Solicitar al usuario que escoja una fila y mostrarle los valores de esa fila.
                     'Guardar un cero en las últimas posiciones de cada fila. Sumar todos los valores de la primera fila. Contar cuántos ceros hay en la segunda columna.
 
-                    Dim matriz(,) As Integer = {{1, 2, 3}, {4, 0, 6}, {7, 0, 9}}
+                    Dim matriz(,) As Integer = {{1, 2, 3}, {0, 2, 6}, {7, 4, 9}}
                     Dim filaParaVer, sumaValoresFila, contador As Integer
 
                     Console.WriteLine("Introduce la fila que quieres ver")
@@ -590,7 +590,9 @@
 
                     'El algoritmo debe detectar si una matriz 4x4 es triangular inferior o superior.
 
-                    Dim matriz(,) As Integer = {{1, 1, 1, 1}, {0, 1, 1, 1}, {0, 0, 1, 1}, {0, 0, 0, 1}}
+                    Dim matriz(,) As Integer = {{1, 0, 0, 0}, {1, 1, 0, 0}, {1, 1, 1, 0}, {1, 1, 1, 1}}
+                    Dim contador As Integer = 1
+                    Dim contador2 As Integer = 0
 
                     For i = 0 To matriz.GetUpperBound(0)
                         Console.WriteLine()
@@ -601,16 +603,21 @@
 
                     Next
 
-                    If matriz(0, 1) = 0 And matriz(0, 2) = 0 And matriz(0, 3) = 0 And matriz(1, 2) = 0 And matriz(1, 3) = 0 And matriz(2, 3) = 0 Then
-                        Console.WriteLine()
-                        Console.WriteLine()
-                        Console.WriteLine("La matriz es triangular inferior")
-                    End If
+                    contador = 1
 
-                    If matriz(1, 0) = 0 And matriz(2, 0) = 0 And matriz(2, 1) = 0 And matriz(3, 0) = 0 And matriz(3, 1) = 0 And matriz(3, 2) = 0 Then
+                    For i = 0 To matriz.GetUpperBound(0)
                         Console.WriteLine()
-                        Console.WriteLine()
-                        Console.WriteLine("La matriz es triangular superior")
+
+                        For o = contador To matriz.GetUpperBound(1)
+                            If matriz(i, o) = 0 Then
+                                contador2 += 1
+                            End If
+                        Next
+                        contador += 1
+                    Next
+
+                    If contador2 = 6 Then
+                        Console.WriteLine("La matriz es triangular inferior")
                     End If
 
                 Case 14
@@ -618,40 +625,35 @@
                     'Diseñar un algoritmo que verifique si una matriz es cuadrada ,
                     'en cuyo caso muestra los elementos de la diagonal principal resaltados en rojo
 
-                    Dim matriz(2, 3) As Integer
-                    Dim contadorFilas, contadorColumnas, contador3 As Integer
+                    Dim matriz(3, 3) As Integer
+                    Dim contador As Integer = 0
 
-                    For i = 0 To matriz.GetUpperBound(0)
-                        Console.WriteLine()
-
-                        For o = 0 To matriz.GetUpperBound(1)
-
-                            Console.Write(matriz(i, o) & " ")
-
-                        Next
-
-                    Next
-
-                    For i = 0 To matriz.GetUpperBound(0)
-
-                        contadorColumnas = 0
-                        contadorFilas += 1
-
-                        For o = 0 To matriz.GetUpperBound(1)
-
-                            contadorColumnas += 1
-                        Next
-
-                        contador3 = contadorColumnas
-                    Next
-
-                    If contadorFilas = contador3 Then
+                    If matriz.GetUpperBound(0) = matriz.GetUpperBound(1) Then
 
                         Console.WriteLine("La matriz es cuadrada")
+                        Console.WriteLine("")
+
+                        For i = 0 To matriz.GetUpperBound(0)
+                            Console.WriteLine("")
+                            For o = 0 To matriz.GetUpperBound(1)
+                                If i = o Then
+                                    Console.ForegroundColor = ConsoleColor.Red
+                                    Console.Write(matriz(i, o))
+                                    Console.ForegroundColor = ConsoleColor.White
+                                Else
+                                    Console.ForegroundColor = ConsoleColor.White
+                                    Console.Write(matriz(i, o))
+                                End If
+
+                            Next
+                        Next
+
                     Else
 
                         Console.WriteLine("La matriz no es cuadrada")
                     End If
+
+
 
                 Case 15
 
