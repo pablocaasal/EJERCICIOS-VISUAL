@@ -590,34 +590,40 @@
 
                     'El algoritmo debe detectar si una matriz 4x4 es triangular inferior o superior.
 
-                    Dim matriz(,) As Integer = {{1, 0, 0, 0}, {1, 1, 0, 0}, {1, 1, 1, 0}, {1, 1, 1, 1}}
-                    Dim contador As Integer = 1
-                    Dim contador2 As Integer = 0
+                    Dim matriz(,) As Integer = {{7, 0, 0}, {4, 6, 0}, {2, 5, 9}}
+                    Dim triangularInferior As Boolean = True
+                    Dim triangularSuperior As Boolean = True
 
-                    For i = 0 To matriz.GetUpperBound(0)
+                    For u = 0 To matriz.GetUpperBound(0)
                         Console.WriteLine()
-
-                        For o = 0 To matriz.GetUpperBound(1)
-                            Console.Write(matriz(i, o) & " ")
+                        For k = 0 To matriz.GetUpperBound(1)
+                            Console.Write(matriz(u, k) & ",")
                         Next
-
                     Next
 
-                    contador = 1
+                    Console.WriteLine()
+                    Console.WriteLine()
 
-                    For i = 0 To matriz.GetUpperBound(0)
-                        Console.WriteLine()
-
-                        For o = contador To matriz.GetUpperBound(1)
-                            If matriz(i, o) = 0 Then
-                                contador2 += 1
+                    For i As Integer = 0 To matriz.GetUpperBound(0)
+                        For o As Integer = 0 To matriz.GetUpperBound(1)
+                            If i < o Then
+                                If matriz(i, o) <> 0 Then
+                                    triangularInferior = False
+                                End If
+                            ElseIf i > o Then
+                                If matriz(i, o) <> 0 Then
+                                    triangularSuperior = False
+                                End If
                             End If
                         Next
-                        contador += 1
                     Next
 
-                    If contador2 = 6 Then
+                    If triangularInferior = True Then
                         Console.WriteLine("La matriz es triangular inferior")
+                    ElseIf triangularSuperior = True Then
+                        Console.WriteLine("La matriz es triangular superior")
+                    Else
+                        Console.WriteLine("La matriz no es ni triangular inferior ni superior")
                     End If
 
                 Case 14
