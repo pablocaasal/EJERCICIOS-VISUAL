@@ -1,4 +1,5 @@
-﻿Module Module1
+﻿Imports System.IO
+Module Module1
 
     Sub Main()
         Dim ejercicio As Integer
@@ -131,7 +132,7 @@
                     If condicionLetra = True And condicionNum = True Then
                         numerosDni = CInt(dni.Substring(0, 8))
                         numerosDni = numerosDni Mod 23
-                        letra = dni.Substring(8)
+                        letra = CChar(dni.Substring(8))
 
                         If letra = matrizLetras(numerosDni) Then
                             Console.WriteLine("DNI VALIDADO. EL CALCULO DE LA LETRA ES CORRECTO")
@@ -401,6 +402,8 @@
                                     Console.WriteLine("Has perdido, nunca sabrás cual era la palabra :(")
                                 End If
 
+
+
                         End Select
 
                         Console.WriteLine()
@@ -408,6 +411,249 @@
                         repetir = CChar(Console.ReadLine)
 
                     Loop Until repetir = "N"c Or repetir = "n"c
+
+                Case 12
+
+                    Dim lector As StreamReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\alumno\Desktop\hola.txt")
+                    Dim contenido As String = lector.ReadToEnd
+                    Console.WriteLine(contenido)
+                    lector.Close()
+
+                Case 13
+
+                    Dim lector As StreamReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\alumno\Desktop\hola.txt")
+                    Dim matriz(99) As String
+                    Dim posicion As Integer = 0
+
+                    While Not lector.EndOfStream
+                        matriz(posicion) = lector.ReadLine
+                        Console.WriteLine("Posición " & posicion & " : " & matriz(posicion))
+                        posicion += 1
+                    End While
+
+                    lector.Close()
+
+                Case 14
+
+                    My.Computer.FileSystem.WriteAllText("C:\Users\alumno\Desktop\hola.txt", "le añado nuevo contenido al archivo para el ejercicio 14", True)
+
+                    Dim lector As StreamReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\alumno\Desktop\hola.txt")
+                    Dim contenido As String = lector.ReadToEnd
+
+                    Console.WriteLine(contenido)
+                    lector.Close()
+
+                Case 15
+
+                    Dim rutaTotal, ruta1, ruta2 As String
+                    Dim posicíonNombre1, posicionNombre2, posicionPunto1, posicionPunto2, resta1, resta2 As Integer
+                    Dim nombre1, nombre2, nombreTotal As String
+
+                    Console.WriteLine("Introduce la ruta del primer archivo")
+                    ruta1 = Console.ReadLine
+                    Console.WriteLine("Introduce la ruta del segundo archivo")
+                    ruta2 = Console.ReadLine
+
+                    'nombre
+
+                    posicíonNombre1 = ruta1.LastIndexOf("\")
+                    posicionPunto1 = ruta1.LastIndexOf(".")
+                    resta1 = (posicionPunto1 - 1) - posicíonNombre1
+                    nombre1 = ruta1.Substring(posicíonNombre1 + 1, resta1)
+
+                    posicionNombre2 = ruta2.LastIndexOf("\")
+                    posicionPunto2 = ruta2.LastIndexOf(".")
+                    resta2 = (posicionPunto2 - 1) - posicionNombre2
+                    nombre2 = ruta2.Substring(posicionNombre2 + 1, resta2)
+
+                    nombreTotal = nombre1 & "-" & nombre2
+                    Console.WriteLine()
+                    Console.WriteLine("Contenido del archivo : " & nombreTotal)
+
+                    'nuevo archivo
+
+                    rutaTotal = Directory.GetCurrentDirectory() + nombreTotal
+
+                    Dim lectorArchivo1 As StreamReader = My.Computer.FileSystem.OpenTextFileReader(ruta1)
+                    Dim contenidoArchivo1 As String = lectorArchivo1.ReadToEnd
+                    lectorArchivo1.Close()
+
+                    Dim lectorArchivo2 As StreamReader = My.Computer.FileSystem.OpenTextFileReader(ruta2)
+                    Dim contenidoArchivo2 As String = lectorArchivo2.ReadToEnd
+                    lectorArchivo2.Close()
+
+                    Dim escritor As StreamWriter = My.Computer.FileSystem.OpenTextFileWriter(rutaTotal, True)
+                    escritor.WriteLine(contenidoArchivo1)
+                    escritor.WriteLine(contenidoArchivo2)
+                    escritor.Close()
+
+                    Dim lectorArchivoTotal As StreamReader = My.Computer.FileSystem.OpenTextFileReader(rutaTotal)
+                    Dim contenidoArchivoTotal As String = lectorArchivoTotal.ReadToEnd
+                    Console.WriteLine(contenidoArchivoTotal)
+                    lectorArchivoTotal.Close()
+
+                Case 16
+
+                    Dim opcion As Integer
+
+                    Console.WriteLine("Introduce el apartado del ejercicio : ")
+                    Console.WriteLine("1 - Mostrar registros")
+                    Console.WriteLine("2 - Insertar nuevO registro")
+                    Console.WriteLine("3 - Consultar DNI")
+                    Console.WriteLine("4 - Mostrar registros con salario mayor a 2500$")
+                    Console.WriteLine("5 - Modificar registro")
+                    Console.WriteLine("6 - Eliminar registro")
+                    Console.WriteLine("7 - Mostrar registros ordenador co salrio de menor a mayor")
+                    Console.WriteLine("8 - Historial con todos los cambios")
+                    opcion = Convert.ToInt32(Console.ReadLine)
+
+                    Select Case opcion
+
+                        Case 1
+
+                            Dim lector As StreamReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt")
+                            Dim contenido As String = lector.ReadToEnd
+                            Console.WriteLine(contenido)
+                            lector.Close()
+
+                        Case 2
+
+                            Dim escritor As StreamWriter = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt", True)
+                            Console.WriteLine("Introduce un nuevo registro")
+                            escritor.WriteLine(Console.ReadLine)
+                            escritor.Close()
+
+                        Case 3
+
+                            Dim dni As String
+                            Dim lector As StreamReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt")
+                            Dim matrizContenido() As String
+                            Dim matrizDni() As String
+                            Dim contador As Integer = 0
+                            Dim contador2 As Integer = 0
+                            Dim condicionDni As Boolean = False
+
+                            Console.WriteLine()
+                            Console.WriteLine("Introduce tu DNI para ver si está en los registros")
+                            dni = Console.ReadLine
+
+                            While Not lector.EndOfStream
+                                ReDim Preserve matrizContenido(contador + 1)
+                                matrizContenido(contador) = lector.ReadLine
+                                contador += 1
+                            End While
+
+                            For i = 0 To matrizContenido.Length - 2
+                                ReDim Preserve matrizDni(contador + 1)
+                                contador2 += 1
+                                matrizDni(i) = matrizContenido(i).Substring(1, 9)
+
+                                If matrizDni(i) = dni Then
+                                    condicionDni = True
+                                End If
+
+                            Next
+
+                            Console.WriteLine()
+
+                            If condicionDni = True Then
+                                Console.WriteLine("Su DNI está almacenado en los registros")
+                            Else
+                                Console.WriteLine("Su DNI no está almacenado en los registros")
+                            End If
+
+                            lector.Close()
+
+                        Case 4
+
+                            Dim lector As StreamReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt")
+                            Dim matrizContenido() As String
+                            Dim matrizSalario() As String
+                            Dim contador As Integer = 0
+                            Dim contador2 As Integer = 0
+                            Dim posicion As Integer
+
+                            Console.WriteLine()
+                            Console.WriteLine("Registros con salario mayor que 2500$ : ")
+                            Console.WriteLine()
+
+                            While Not lector.EndOfStream
+                                ReDim Preserve matrizContenido(contador + 1)
+                                matrizContenido(contador) = lector.ReadLine
+                                contador += 1
+                            End While
+
+                            For i = 0 To matrizContenido.Length - 2
+                                ReDim Preserve matrizSalario(contador2 + 1)
+                                posicion = matrizContenido(i).LastIndexOf("?")
+                                matrizSalario(i) = matrizContenido(i).Substring(posicion + 1, 4)
+                                contador2 += 1
+
+                                If Convert.ToInt32(matrizSalario(i)) > 2500 Then
+                                    Console.WriteLine(matrizContenido(i))
+                                End If
+
+                            Next
+
+                            lector.Close()
+
+                        Case 5
+
+                            Dim lector As StreamReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt")
+                            Dim matrizContenido(), matrizDni() As String
+                            Dim contador As Integer = 0
+                            Dim contador2 As Integer = 0
+                            Dim dni As String
+                            Dim posicion As Integer
+                            Dim nuevoSalario As String
+                            Dim random As New Random
+
+                            Console.WriteLine("Introduce tu DNI")
+                            dni = Console.ReadLine
+
+                            While Not lector.EndOfStream
+                                ReDim Preserve matrizContenido(contador + 1)
+                                matrizContenido(contador) = lector.ReadLine
+                                contador += 1
+                            End While
+                            lector.Close()
+
+                            Dim lector2 As StreamReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt")
+                            Dim contenido2 As String = lector2.ReadToEnd
+                            Console.WriteLine("")
+                            Console.WriteLine("Registros antes de modificarlos : ")
+                            Console.WriteLine(contenido2)
+                            lector2.Close()
+
+                            Dim escritor1 As StreamWriter = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt", False)
+
+                            For i = 0 To matrizContenido.Length - 2
+                                ReDim Preserve matrizDni(contador + 1)
+                                contador2 += 1
+                                matrizDni(i) = matrizContenido(i).Substring(1, 9)
+
+                                If matrizDni(i) = dni Then
+                                    nuevoSalario = Convert.ToString(random.Next(1000, 10000))
+                                    matrizContenido(i) = matrizContenido(i).Remove(posicion + 1, 5)
+                                    matrizContenido(i) = matrizContenido(i).Insert(posicion + 1, nuevoSalario)
+                                    escritor1.WriteLine(matrizContenido(i))
+                                Else
+                                    escritor1.WriteLine(matrizContenido(i))
+                                End If
+
+                            Next
+
+                            escritor1.Close()
+
+                            Dim lector3 As StreamReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt")
+                            Dim contenido3 As String = lector3.ReadToEnd
+                            Console.WriteLine("")
+                            Console.WriteLine("Registros después de modificarlos : ")
+                            Console.WriteLine(contenido3)
+                            lector3.Close()
+
+
+                    End Select
 
             End Select
 
