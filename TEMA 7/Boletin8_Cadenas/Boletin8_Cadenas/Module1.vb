@@ -321,7 +321,6 @@ Module Module1
                                 Console.WriteLine("LA PALABRA TIENE " & palabraIndividual.Length & " LETRAS")
 
                                 Do
-
                                     contador += 1
                                     Console.WriteLine()
                                     Console.WriteLine("ADIVINA LA LETRA")
@@ -345,54 +344,54 @@ Module Module1
                                     Loop Until letra <> letraRepetida
 
                                     acierto = False
-                                        contadorLetrasRepetidas = 0
+                                    contadorLetrasRepetidas = 0
 
-                                        For o = 0 To palabraIndividual.Length - 1
+                                    For o = 0 To palabraIndividual.Length - 1
 
-                                            If letra = palabraIndividual(o) Then
-                                                acierto = True
-                                                matrizLetrasAcertadas(contador) = letra
-                                                contadorAciertos += 1
-                                                contadorLetrasRepetidas += 1
+                                        If letra = palabraIndividual(o) Then
+                                            acierto = True
+                                            matrizLetrasAcertadas(contador) = letra
+                                            contadorAciertos += 1
+                                            contadorLetrasRepetidas += 1
 
-                                                If contadorLetrasRepetidas > 1 Then
-                                                    Console.WriteLine()
-                                                    Console.WriteLine("QUE AFORTUNADO, LA PALABRA CONTIENE " & contadorLetrasRepetidas & " " & letra)
-                                                    Console.WriteLine()
-                                                End If
-
-                                                If contadorLetrasRepetidas = 1 Then
-                                                    Console.WriteLine("HAS ACERTADO LA LETRA")
-
-                                                    Console.WriteLine("")
-                                                    Console.WriteLine("LETRAS UTILIZADAS : ")
-
-                                                    For j = 0 To contador
-                                                        Console.Write(matrizLetras(j) & ", ")
-                                                    Next
-
-                                                    Console.WriteLine("")
-                                                    Console.WriteLine("")
-                                                    Console.WriteLine("LETRAS ACERTADAS : ")
-
-                                                    For u = 0 To contador
-                                                        Console.Write(matrizLetrasAcertadas(u) & ", ")
-                                                    Next
-
-                                                    Console.WriteLine("")
-                                                    Console.WriteLine("")
-                                                    Console.WriteLine("TE QUEDAN " & vidas1 & " INTENTOS")
-                                                End If
+                                            If contadorLetrasRepetidas > 1 Then
+                                                Console.WriteLine()
+                                                Console.WriteLine("QUE AFORTUNADO, LA PALABRA CONTIENE " & contadorLetrasRepetidas & " " & letra)
+                                                Console.WriteLine()
                                             End If
-                                        Next
 
-                                        If acierto = False Then
-                                            Console.Write("NO HAS ACERTADO LA LETRA")
-                                            contadorFallos += 1
-                                            vidas1 -= 1
+                                            If contadorLetrasRepetidas = 1 Then
+                                                Console.WriteLine("HAS ACERTADO LA LETRA")
 
-                                            If contadorFallos = 1 Then
-                                                Console.WriteLine("
+                                                Console.WriteLine("")
+                                                Console.WriteLine("LETRAS UTILIZADAS : ")
+
+                                                For j = 0 To contador
+                                                    Console.Write(matrizLetras(j) & ", ")
+                                                Next
+
+                                                Console.WriteLine("")
+                                                Console.WriteLine("")
+                                                Console.WriteLine("LETRAS ACERTADAS : ")
+
+                                                For u = 0 To contador
+                                                    Console.Write(matrizLetrasAcertadas(u) & ", ")
+                                                Next
+
+                                                Console.WriteLine("")
+                                                Console.WriteLine("")
+                                                Console.WriteLine("TE QUEDAN " & vidas1 & " INTENTOS")
+                                            End If
+                                        End If
+                                    Next
+
+                                    If acierto = False Then
+                                        Console.Write("NO HAS ACERTADO LA LETRA")
+                                        contadorFallos += 1
+                                        vidas1 -= 1
+
+                                        If contadorFallos = 1 Then
+                                            Console.WriteLine("
            ________
            |/      
            |       
@@ -403,9 +402,9 @@ Module Module1
            |
         -------
         ")
-                                            End If
-                                            If contadorFallos = 2 Then
-                                                Console.WriteLine("
+                                        End If
+                                        If contadorFallos = 2 Then
+                                            Console.WriteLine("
            _________
            |/      
            |       
@@ -416,9 +415,9 @@ Module Module1
            |
         -------
         ")
-                                            End If
-                                            If contadorFallos = 3 Then
-                                                Console.WriteLine("
+                                        End If
+                                        If contadorFallos = 3 Then
+                                            Console.WriteLine("
            _________
            |/      | 
            |       
@@ -429,9 +428,9 @@ Module Module1
            |
         -------
         ")
-                                            End If
-                                            If contadorFallos = 4 Then
-                                                Console.WriteLine("
+                                        End If
+                                        If contadorFallos = 4 Then
+                                            Console.WriteLine("
            _________
            |/      | 
            |       |
@@ -442,9 +441,9 @@ Module Module1
            |
         -------
         ")
-                                            End If
-                                            If contadorFallos = 5 Then
-                                                Console.WriteLine("
+                                        End If
+                                        If contadorFallos = 5 Then
+                                            Console.WriteLine("
            _________
            |/      | 
            |       |
@@ -455,9 +454,9 @@ Module Module1
            |
         -------
         ")
-                                            End If
-                                            If contadorFallos = 6 Then
-                                                Console.WriteLine("
+                                        End If
+                                        If contadorFallos = 6 Then
+                                            Console.WriteLine("
            _________
            |/      | 
            |       |
@@ -468,9 +467,9 @@ Module Module1
            |
         -------
         ")
-                                            End If
-                                            If contadorFallos = 7 Then
-                                                Console.WriteLine("
+                                        End If
+                                        If contadorFallos = 7 Then
+                                            Console.WriteLine("
            _________
            |/      | 
            |       |
@@ -481,9 +480,9 @@ Module Module1
            |
         -------
         ")
-                                            End If
-                                            If contadorFallos = 8 Then
-                                                Console.WriteLine("
+                                        End If
+                                        If contadorFallos = 8 Then
+                                            Console.WriteLine("
            _________
            |/      | 
            |       |
@@ -494,9 +493,9 @@ Module Module1
            |
         -------
         ")
-                                            End If
-                                            If contadorFallos = 9 Then
-                                                Console.WriteLine("
+                                        End If
+                                        If contadorFallos = 9 Then
+                                            Console.WriteLine("
            _________
            |/      | 
            |       |
@@ -507,9 +506,9 @@ Module Module1
            |
         -------
         ")
-                                            End If
-                                            If contadorFallos = 10 Then
-                                                Console.WriteLine("
+                                        End If
+                                        If contadorFallos = 10 Then
+                                            Console.WriteLine("
            _________
            |/      | 
            |       |
@@ -520,43 +519,43 @@ Module Module1
            |
         -------
         ")
-                                            End If
-
-                                            Console.WriteLine("")
-                                            Console.WriteLine("LETRAS UTILIZADAS : ")
-
-                                            For j = 0 To contador
-                                                Console.Write(matrizLetras(j) & ", ")
-                                            Next
-
-                                            Console.WriteLine("")
-                                            Console.WriteLine("LETRAS ACERTADAS : ")
-
-                                            For u = 0 To contador
-                                                Console.Write(matrizLetrasAcertadas(u) & ", ")
-                                            Next
-
-                                            Console.WriteLine()
-                                            Console.WriteLine()
-                                            Console.WriteLine("TE QUEDAN " & vidas1 & " INTENTOS")
-
-
                                         End If
+
+                                        Console.WriteLine("")
+                                        Console.WriteLine("LETRAS UTILIZADAS : ")
+
+                                        For j = 0 To contador
+                                            Console.Write(matrizLetras(j) & ", ")
+                                        Next
+
+                                        Console.WriteLine("")
+                                        Console.WriteLine("LETRAS ACERTADAS : ")
+
+                                        For u = 0 To contador
+                                            Console.Write(matrizLetrasAcertadas(u) & ", ")
+                                        Next
 
                                         Console.WriteLine()
+                                        Console.WriteLine()
+                                        Console.WriteLine("TE QUEDAN " & vidas1 & " INTENTOS")
 
-                                        If contadorAciertos = palabraIndividual.Length Then
-                                            Console.WriteLine()
-                                            Console.WriteLine("HAS ACERTADO ! LA PALABRA ERA " & palabraIndividual)
-                                            ganar = True
-                                        End If
 
-                                        If vidas1 = 0 Then
-                                            Console.WriteLine()
-                                            Console.WriteLine("HAS PERDIDO :( LA PALABRA ERA " & palabraIndividual)
-                                        End If
+                                    End If
 
-                                    Loop Until ganar = True Or vidas1 = 0
+                                    Console.WriteLine()
+
+                                    If contadorAciertos = palabraIndividual.Length Then
+                                        Console.WriteLine()
+                                        Console.WriteLine("HAS ACERTADO ! LA PALABRA ERA " & palabraIndividual)
+                                        ganar = True
+                                    End If
+
+                                    If vidas1 = 0 Then
+                                        Console.WriteLine()
+                                        Console.WriteLine("HAS PERDIDO :( LA PALABRA ERA " & palabraIndividual)
+                                    End If
+
+                                Loop Until ganar = True Or vidas1 = 0
 
                             Case 2
 
@@ -743,6 +742,162 @@ Module Module1
                                 Loop Until ganar = True Or vidas1 = 0
 
                             Case 3
+
+                                Dim vidas1 = 3
+                                Dim matrizLetras(99) As Char
+                                Dim matrizLetrasAcertadas(99) As Char
+                                palabraRandom = random.Next(0, palabras.Length - 1)
+                                palabraIndividual = palabras(palabraRandom)
+                                Console.WriteLine()
+                                Console.WriteLine("LA PALABRA TIENE " & palabraIndividual.Length & " LETRAS")
+
+                                Do
+
+                                    contador += 1
+                                    Console.WriteLine()
+                                    Console.WriteLine("ADIVINA LA LETRA")
+                                    letra = CChar(Console.ReadLine)
+                                    matrizLetras(contador) = letra
+                                    Console.Clear()
+                                    Console.WriteLine()
+
+                                    Do
+                                        For h = 0 To contador - 1
+                                            If letra = matrizLetras(h) Then
+                                                letraRepetida = letra
+                                                Console.WriteLine()
+                                                Console.WriteLine("ERROR, NO PUEDES REPETIR LAS LETRAS")
+                                                Console.WriteLine()
+                                                Console.WriteLine("ADIVINA LA LETRA")
+                                                letra = CChar(Console.ReadLine)
+                                                matrizLetras(contador) = letra
+                                            End If
+                                        Next
+                                    Loop Until letra <> letraRepetida
+
+                                    acierto = False
+                                    contadorLetrasRepetidas = 0
+
+                                    For o = 0 To palabraIndividual.Length - 1
+
+                                        If letra = palabraIndividual(o) Then
+                                            acierto = True
+                                            matrizLetrasAcertadas(contador) = letra
+                                            contadorAciertos += 1
+                                            contadorLetrasRepetidas += 1
+
+                                            If contadorLetrasRepetidas > 1 Then
+                                                Console.WriteLine()
+                                                Console.WriteLine("QUE AFORTUNADO, LA PALABRA CONTIENE " & contadorLetrasRepetidas & " " & letra)
+                                                Console.WriteLine()
+                                            End If
+
+                                            If contadorLetrasRepetidas = 1 Then
+                                                Console.WriteLine("HAS ACERTADO LA LETRA")
+
+                                                Console.WriteLine("")
+                                                Console.WriteLine("LETRAS UTILIZADAS : ")
+
+                                                For j = 0 To contador
+                                                    Console.Write(matrizLetras(j) & ", ")
+                                                Next
+
+                                                Console.WriteLine("")
+                                                Console.WriteLine("")
+                                                Console.WriteLine("LETRAS ACERTADAS : ")
+
+                                                For u = 0 To contador
+                                                    Console.Write(matrizLetrasAcertadas(u) & ", ")
+                                                Next
+
+                                                Console.WriteLine("")
+                                                Console.WriteLine("")
+                                                Console.WriteLine("TE QUEDAN " & vidas1 & " INTENTOS")
+                                            End If
+                                        End If
+                                    Next
+
+                                    If acierto = False Then
+                                        Console.Write("NO HAS ACERTADO LA LETRA")
+                                        contadorFallos += 1
+                                        vidas1 -= 1
+
+
+                                        If contadorFallos = 1 Then
+                                            Console.WriteLine("
+           _________
+           |/      | 
+           |       |
+           |       o
+           |      /|\
+           |      
+           |
+           |
+        -------
+        ")
+                                        End If
+                                        If contadorFallos = 2 Then
+                                            Console.WriteLine("
+           _________
+           |/      | 
+           |       |
+           |       o
+           |      /|\
+           |      /
+           |
+           |
+        -------
+        ")
+                                        End If
+                                        If contadorFallos = 3 Then
+                                            Console.WriteLine("
+           _________
+           |/      | 
+           |       |
+           |       o
+           |      /|\
+           |      / \
+           |
+           |
+        -------
+        ")
+                                        End If
+
+                                        Console.WriteLine("")
+                                        Console.WriteLine("LETRAS UTILIZADAS : ")
+
+                                        For j = 0 To contador
+                                            Console.Write(matrizLetras(j) & ", ")
+                                        Next
+
+                                        Console.WriteLine("")
+                                        Console.WriteLine("LETRAS ACERTADAS : ")
+
+                                        For u = 0 To contador
+                                            Console.Write(matrizLetrasAcertadas(u) & ", ")
+                                        Next
+
+                                        Console.WriteLine()
+                                        Console.WriteLine()
+                                        Console.WriteLine("TE QUEDAN " & vidas1 & " INTENTOS")
+
+
+                                    End If
+
+                                    Console.WriteLine()
+
+                                    If contadorAciertos = palabraIndividual.Length Then
+                                        Console.WriteLine()
+                                        Console.WriteLine("HAS ACERTADO ! LA PALABRA ERA " & palabraIndividual)
+                                        ganar = True
+                                    End If
+
+                                    If vidas1 = 0 Then
+                                        Console.WriteLine()
+                                        Console.WriteLine("HAS PERDIDO :( LA PALABRA ERA " & palabraIndividual)
+                                    End If
+
+                                Loop Until ganar = True Or vidas1 = 0
 
                         End Select
 
@@ -969,7 +1124,7 @@ Module Module1
                             Dim escritor1 As StreamWriter = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt", False)
 
                             For i = 0 To matrizContenido.Length - 2
-                                ReDim Preserve matrizDni(contador2 + 1)
+                                ReDim Preserve matrizDni(contador2)
                                 contador2 += 1
                                 matrizDni(i) = matrizContenido(i).Substring(1, 9)
 
@@ -1048,10 +1203,11 @@ Module Module1
                             Dim lector As StreamReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt")
                             Dim matrizRegistros() As String
                             Dim matrizSalario() As Integer
+                            Dim matrizSalarioOrdenado() As Integer
+                            Dim matrizRegistrosOrdenados() As String
                             Dim contador As Integer = 0
                             Dim contador2 As Integer = 0
                             Dim contador3 As Integer = 0
-                            Dim contador4 As Integer = 1
                             Dim posicion As Integer
                             Dim mayor As Integer
                             Dim mayorString As String
@@ -1077,10 +1233,43 @@ Module Module1
                                 contador2 += 1
                             Next
 
-                            Dim escritorr As StreamWriter = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt", False)
+                            For r = 0 To matrizSalario.Length - 1
+                                ReDim Preserve matrizRegistrosOrdenados(contador3)
+                                ReDim Preserve matrizSalarioOrdenado(contador3)
+                                contador3 += 1
+                            Next
+
+                            For b = 0 To matrizSalario.Length - 1
+                                For f = b + 1 To matrizSalario.Length - 1
+                                    If matrizSalario(b) > matrizSalario(f) Then
+                                        mayor = matrizSalario(b)
+                                        matrizSalario(b) = matrizSalario(f)
+                                        matrizSalario(f) = mayor
+
+                                        mayorString = matrizRegistros(b)
+                                        matrizRegistros(b) = matrizRegistros(f)
+                                        matrizRegistros(f) = mayorString
+                                    End If
+                                Next
+                            Next
+
                             Dim matrizSalarioString(matrizSalario.Length - 1) As String
 
+                            For v = 0 To matrizSalario.Length - 1
+                                matrizSalarioString(v) = Convert.ToString(matrizSalario(v))
+                            Next
 
+                            For y = 0 To matrizSalarioString.Length - 1
+                                posicion = matrizRegistros(y).LastIndexOf("?")
+                                matrizRegistros(y) = matrizRegistros(y).Remove(posicion + 1)
+                                matrizRegistros(y) = matrizRegistros(y).Insert(posicion + 1, matrizSalarioString(y))
+                            Next
+
+                            Dim escritorr As StreamWriter = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\alumno\Desktop\Clases\Aplicaciones Ofimaticas\archivos visual\registros16.txt", False)
+
+                            For g = 0 To matrizRegistros.Length - 1
+                                escritorr.WriteLine(matrizRegistros(g))
+                            Next
 
                             escritorr.Close()
                             Console.WriteLine()
@@ -1091,6 +1280,10 @@ Module Module1
                                 Console.WriteLine(lector2.ReadLine())
                             End While
                             lector2.Close()
+
+                        Case 8
+
+                            Dim ruta As String = Directory.GetCurrentDirectory() + "\archivoej8.txt"
 
                     End Select
 
