@@ -8,6 +8,7 @@ Module Module1
         Do
             Console.WriteLine("Introduce el ejercicio que quieres ejecutar")
             ejercicio = Convert.ToInt32(Console.ReadLine)
+            Console.WriteLine()
 
             Select Case ejercicio
                 Case 1
@@ -36,14 +37,10 @@ Module Module1
                     Next
 
                     Console.WriteLine()
-                    Dim capacidad2 As Integer
-                    capacidad2 = lista1.Capacity
-                    Console.WriteLine("La capacidad de la lista es " & capacidad2)
+                    Console.WriteLine("La capacidad de la lista es " & lista1.Capacity)
 
                     'd
-                    Dim elementosAlmacenados2 As Integer
-                    elementosAlmacenados2 = lista1.Count
-                    Console.WriteLine("Número de elementos almacenados realmente : " & elementosAlmacenados2)
+                    Console.WriteLine("Número de elementos almacenados realmente : " & lista1.Count)
 
                     'e
                     Console.WriteLine("Posición del número 15 : " & lista1.IndexOf(15))
@@ -100,9 +97,106 @@ Module Module1
                     Next
 
                     escritor.Close()
+
                 Case 2
+
+                    Dim lista2 As ArrayList = New ArrayList(10)
+                    Dim random As New Random()
+                    Dim valorPosicion As Double
+                    Dim posicion As Integer
+                    Dim valorBuscado As Double
+                    Dim condicion As Boolean
+                    Dim valorEliminado As Double
+
+                    For i = 0 To lista2.Capacity - 1
+                        lista2.Add(random.NextDouble())
+                    Next
+
+                    For Each valor In lista2
+                        Console.WriteLine(String.Format("{0:F20}", valor))
+                    Next
+
+                    'a
+                    Console.WriteLine()
+                    Console.WriteLine("Capacidad de la lista : " & lista2.Capacity)
+                    Console.WriteLine("Nº de elementos almacenados realmente : " & lista2.Count)
+
+                    'b
+                    Console.WriteLine()
+                    Console.WriteLine("Introduce un valor para obtener su posición")
+                    valorPosicion = Convert.ToDouble(Console.ReadLine)
+                    posicion = lista2.IndexOf(valorPosicion)
+                    Console.WriteLine("El valor " & valorPosicion & " está en la posición " & posicion)
+
+                    'c
+                    Console.WriteLine()
+                    Console.WriteLine("Introduce el valor que quieres buscar")
+                    valorBuscado = Convert.ToDouble(Console.ReadLine)
+                    condicion = lista2.Contains(valorBuscado)
+
+                    If condicion = True Then
+                        Console.WriteLine("El valor " & valorBuscado & " está en la lista")
+                    Else
+                        Console.WriteLine("El valor " & valorBuscado & " no está en la lista")
+                    End If
+
+                    'd
+                    Console.WriteLine()
+                    Console.WriteLine("Introduce el valor que quieres eliminar")
+                    valorEliminado = Convert.ToDouble(Console.ReadLine)
+                    lista2.Remove(valorEliminado)
+                    Console.WriteLine()
+
+                    For Each valor In lista2
+                        Console.WriteLine(valor)
+                    Next
+
                 Case 3
+
+                    Dim lista3 As ArrayList = New ArrayList(10)
+                    Dim random As New Random
+                    Dim mayor, menor As Integer
+                    Dim matriz(9) As Integer
+
+                    For i = 0 To lista3.Capacity - 1
+                        lista3.Add(random.Next(0, 11))
+                        matriz(i) = Convert.ToInt32(lista3(i))
+                    Next
+
+                    For Each valor In lista3
+                        Console.WriteLine(valor)
+                    Next
+
+                    mayor = matriz(0)
+                    menor = matriz(0)
+
+                    For k = 0 To matriz.Length - 1
+                        For j = 0 To matriz.Length - 1
+                            mayor = Math.Max(mayor, matriz(j))
+                            menor = Math.Min(menor, matriz(j))
+                        Next
+                    Next
+
+                    Console.WriteLine()
+                    Console.WriteLine("El mayor es " & mayor)
+                    Console.WriteLine("El menor es " & menor)
+
                 Case 4
+
+                    Dim lista4 As ArrayList = New ArrayList(10)
+                    Dim matriz(9) As String
+
+                    lista4.Add("Buenas")
+                    lista4.Add("Tardes")
+                    lista4.Add("Casa")
+                    lista4.Add("Esternocleidomastoideo")
+
+                    For i = 0 To lista4.Capacity - 1
+                        matriz(i) = Convert.ToString(lista4(i))
+                    Next
+
+
+
                 Case 5
 
             End Select
