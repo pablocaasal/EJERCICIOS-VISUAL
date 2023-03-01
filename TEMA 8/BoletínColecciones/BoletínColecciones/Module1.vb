@@ -183,21 +183,223 @@ Module Module1
 
                 Case 4
 
-                    Dim lista4 As ArrayList = New ArrayList(10)
-                    Dim matriz(9) As String
+                    Dim lista4 As ArrayList = New ArrayList()
+                    Dim matrizContadores() As Integer
+                    Dim mayor, menor As Integer
+                    Dim contador As Integer = 0
 
                     lista4.Add("Buenas")
                     lista4.Add("Tardes")
                     lista4.Add("Casa")
                     lista4.Add("Esternocleidomastoideo")
 
-                    For i = 0 To lista4.Capacity - 1
-                        matriz(i) = Convert.ToString(lista4(i))
+                    For Each palabra In lista4
+                        Console.WriteLine(palabra)
+                        ReDim Preserve matrizContadores(contador)
+
+                        For r = 0 To palabra.ToString.Length - 1
+                            matrizContadores(contador) = matrizContadores(contador) + 1
+                        Next
+                        contador += 1
                     Next
 
+                    mayor = matrizContadores(0)
+                    menor = matrizContadores(0)
 
+                    For f = 0 To matrizContadores.Length - 1
+                        For j = 0 To matrizContadores.Length - 1
+                            mayor = Math.Max(mayor, matrizContadores(j))
+                            menor = Math.Min(menor, matrizContadores(j))
+                        Next
+                    Next
+
+                    Console.WriteLine()
+
+                    For k = 0 To matrizContadores.Length - 1
+                        If mayor = matrizContadores(k) Then
+                            Console.WriteLine("Palabra mas larga : ")
+                            Console.WriteLine(lista4(k))
+                        End If
+
+                        If menor = matrizContadores(k) Then
+                            Console.WriteLine("Palabra mas corta : ")
+                            Console.WriteLine(lista4(k))
+                        End If
+                    Next
 
                 Case 5
+
+                    Dim lista5 As ArrayList = New ArrayList()
+                    Dim edad1 As Integer
+                    Dim sumaEdades As Integer
+                    Dim media As Double
+                    Dim otraEdad As Char
+
+                    Do
+                        Console.WriteLine("Introduce una edad")
+                        edad1 = Convert.ToInt32(Console.ReadLine)
+                        lista5.Add(edad1)
+                        Console.WriteLine("Quieres introducir otra edad ? {S/N}")
+                        otraEdad = CChar(Console.ReadLine)
+                    Loop Until otraEdad = "n"c Or otraEdad = "N"c
+
+                    For Each edad In lista5
+                        Console.WriteLine(edad)
+                        sumaEdades += Convert.ToInt32(edad)
+                    Next
+
+                    Console.WriteLine()
+                    media = Convert.ToDouble(sumaEdades / lista5.Count)
+                    Console.WriteLine("La media de edades es {0}", media)
+
+                Case 6
+
+                    Dim lista6 As ArrayList = New ArrayList
+                    Dim suma, numero As Double
+                    Dim otroNumero As Char
+
+                    Do
+                        Console.WriteLine("Introduce un número")
+                        numero = Convert.ToDouble(Console.ReadLine)
+                        lista6.Add(numero)
+                        Console.WriteLine("Quieres introducir otro número ? {S/N}")
+                        otroNumero = CChar(Console.ReadLine)
+                    Loop Until otroNumero = "n"c Or otroNumero = "N"c
+
+                    For Each num As Double In lista6
+                        Console.WriteLine(num)
+                        If num Mod 2 = 0 Then
+                            suma += num
+                        End If
+                    Next
+
+                    Console.WriteLine()
+                    Console.WriteLine("La suma de los numeros pares es {0}", suma)
+
+                Case 7
+
+                    Dim lista7 As ArrayList = New ArrayList
+                    Dim nombre As String
+                    Dim otroNombre As Char
+
+                    Do
+                        Console.WriteLine("Introduce un nombre")
+                        nombre = Convert.ToString(Console.ReadLine)
+                        lista7.Add(nombre)
+                        Console.WriteLine("Quieres introducir otro nombre ? {S/N}")
+                        otroNombre = CChar(Console.ReadLine)
+                    Loop Until otroNombre = "n"c Or otroNombre = "N"c
+
+                    Console.WriteLine("Lista sin ordenadar alfabéticamente : ")
+
+                    For Each nombres In lista7
+                        Console.WriteLine(nombres)
+                    Next
+
+                    Console.WriteLine("")
+                    Console.WriteLine("Lista ordenada alfabéticamente : ")
+                    lista7.Sort()
+
+                    For Each nombres2 In lista7
+                        Console.WriteLine(nombres2)
+                    Next
+
+                Case 8
+
+                    Dim lista8 As ArrayList = New ArrayList
+                    Dim palabra As String
+                    Dim otraPalabra As Char
+                    Dim contadorLetras, contadorMasDe5 As Integer
+
+                    Do
+                        Console.WriteLine("Introduce un palabra")
+                        palabra = Convert.ToString(Console.ReadLine)
+                        lista8.Add(palabra)
+                        Console.WriteLine("Quieres introducir otra palabra ? {S/N}")
+                        otraPalabra = CChar(Console.ReadLine)
+                    Loop Until otraPalabra = "n"c Or otraPalabra = "N"c
+
+                    For Each palabras In lista8
+                        Console.WriteLine(palabras)
+                        contadorLetras = 0
+
+                        For I = 0 To palabras.ToString.Length - 1
+                            contadorLetras += 1
+                        Next
+
+                        If contadorLetras >= 5 Then
+                            contadorMasDe5 += 1
+                        End If
+                    Next
+
+                    Console.WriteLine()
+                    Console.WriteLine("El número de palabras con {0}", contadorMasDe5)
+
+                Case 9
+
+                    Dim lista9 As ArrayList = New ArrayList()
+                    Dim opcion As Integer
+                    Dim rutaL As String = Directory.GetCurrentDirectory() + "\pelis.txt"
+                    Dim lector As StreamReader = My.Computer.FileSystem.OpenTextFileReader(rutaL)
+
+                    While Not lector.EndOfStream
+                        lista9.Add(lector.ReadLine)
+                    End While
+                    lector.Close()
+
+                    Console.WriteLine("Que quieres hacer ?")
+                    Console.WriteLine("1 - Mostrar películas")
+                    Console.WriteLine("2 - Buscar película")
+                    Console.WriteLine("3 - Añadir película")
+                    Console.WriteLine("4 - Eliminar película")
+                    opcion = Convert.ToInt32(Console.ReadLine)
+
+                    Select Case opcion
+                        Case 1
+
+                            For Each movies In lista9
+                                Console.WriteLine(movies)
+                            Next
+
+                        Case 2
+
+                            Dim peliBuscada As String
+
+                            Console.WriteLine("Introduce la película que quieres buscar")
+                            peliBuscada = Console.ReadLine
+
+                            If lista9.Contains(peliBuscada) Then
+                                Console.WriteLine("La película está en la lista")
+                            Else
+                                Console.WriteLine("La película no está en la lista")
+                            End If
+
+                        Case 3
+
+                            Dim peliAñadida As String
+
+                            Console.WriteLine("Introduce la película que quieres añadir")
+                            peliAñadida = Console.ReadLine
+                            lista9.Add(peliAñadida)
+
+                        Case 4
+
+                            Dim peliEliminada As String
+
+                            Console.WriteLine("Introduce la película que quieres eliminar")
+                            peliEliminada = Console.ReadLine
+                            lista9.Remove(peliEliminada)
+
+                    End Select
+
+                    Dim ruta As String = Directory.GetCurrentDirectory() + "\pelis.txt"
+                    Dim escritor1 As StreamWriter = My.Computer.FileSystem.OpenTextFileWriter(ruta, False)
+
+                    For Each peli In lista9
+                        escritor1.WriteLine(peli)
+                    Next
+
+                    escritor1.Close()
 
             End Select
 
