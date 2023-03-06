@@ -4,6 +4,7 @@ Module Module1
     Sub Main()
         Dim ejercicio As Integer
         Dim continuar As Char
+        Dim lista1 As ArrayList = New ArrayList(10)
 
         Do
             Console.WriteLine("Introduce el ejercicio que quieres ejecutar")
@@ -13,7 +14,6 @@ Module Module1
             Select Case ejercicio
                 Case 1
 
-                    Dim lista1 As ArrayList = New ArrayList(10)
                     Dim random As New Random
 
                     'a
@@ -43,7 +43,10 @@ Module Module1
                     Console.WriteLine("Número de elementos almacenados realmente : " & lista1.Count)
 
                     'e
-                    Console.WriteLine("Posición del número 15 : " & lista1.IndexOf(15))
+                    Dim number As Integer
+                    Console.WriteLine("Introduce un valor para buscar su posición")
+                    number = Convert.ToInt32(Console.ReadLine)
+                    Console.WriteLine("Posición del número 15 : " & lista1.IndexOf(number))
                     Console.WriteLine()
 
                     'f
@@ -401,6 +404,178 @@ Module Module1
 
                     escritor1.Close()
 
+                Case 10
+
+                    Dim lista10 As ArrayList = New ArrayList(lista1)
+                    Dim random As New Random
+
+                    For i = 0 To 4
+                        lista10.Add(random.Next(100, 201))
+                    Next
+
+                    For Each aletorio In lista10
+                        Console.WriteLine(aletorio)
+                    Next
+
+                Case 11
+
+                    Dim lista11 As ArrayList = New ArrayList()
+                    Dim listaCopias As ArrayList = New ArrayList()
+                    Dim random As New Random
+                    Dim suma As Integer
+                    Dim media As Double
+                    Dim contadorVeintes As Integer
+                    Dim porcentaje As Double
+                    Dim contadorRepetidos As Integer
+
+                    For i = 0 To 9
+                        lista11.Add(random.Next(1, 26))
+                    Next
+
+                    For Each num In lista11
+                        Console.WriteLine(num)
+                    Next
+                    Console.WriteLine()
+
+                    'a
+                    If lista11.IndexOf(2) >= 0 Then
+                        Console.WriteLine("Posición del valor 2 : " & lista11.IndexOf(2))
+                    Else
+                        Console.WriteLine("El valor 2 no se encuentra en la lista")
+                    End If
+                    Console.WriteLine()
+
+                    'b
+                    For Each number In lista11
+                        suma += Convert.ToInt32(number)
+                    Next
+                    Console.WriteLine("Suma de los valores generados {0}", suma)
+                    Console.WriteLine()
+
+                    'c
+                    media = Convert.ToDouble(suma / lista11.Count)
+                    Console.WriteLine("La media de los valores generados es {0}", media)
+                    Console.WriteLine()
+
+                    'd
+                    For Each number In lista11
+                        If Convert.ToInt32(number) > 20 Then
+                            contadorVeintes += 1
+                        End If
+                    Next
+                    porcentaje = contadorVeintes * lista11.Count
+                    Console.WriteLine("El {0}% de los valores son superiores a 20", porcentaje)
+                    Console.WriteLine()
+
+                    'e
+                    For i = 0 To lista11.Count - 1
+                        contadorRepetidos = 0
+
+                        If listaCopias.Contains(lista11(i)) Then
+                            i += 1
+                        End If
+
+                        For n = 0 To lista11.Count - 1
+                            If Convert.ToInt32(lista11(i)) = Convert.ToInt32(lista11(n)) Then
+                                contadorRepetidos += 1
+                            End If
+                        Next
+
+                        If contadorRepetidos = 1 Then
+                            Console.WriteLine(lista11(i))
+                        Else
+                            listaCopias.Add(lista11(i))
+                            Console.WriteLine(lista11(i))
+                        End If
+                    Next
+
+                Case 12
+
+                    Dim lista12 As ArrayList = New ArrayList()
+                    Dim listaCompletadas As ArrayList = New ArrayList()
+                    Dim tCompletada As String
+                    Dim apartado As Integer
+                    Dim otroApartado As Char
+
+                    Do
+
+                        Console.WriteLine("Introduce el apartado que quieres ejecutar [1-6]")
+                        apartado = Convert.ToInt32(Console.ReadLine)
+
+                        Select Case apartado
+                            Case 1
+                                Dim tarea As String
+                                Dim contador As Integer = 0
+                                Dim condicion As Boolean = False
+
+                                Console.WriteLine("Introduce una tarea con formato Título*Proridad*mes-dia-año")
+                                tarea = Console.ReadLine
+
+                                Do
+                                    contador = 0
+
+                                    For i = 0 To tarea.Length - 1
+                                        If tarea(i).ToString.Contains("*") Then
+                                            contador += 1
+                                        End If
+                                    Next
+
+                                    If contador <> 2 Then
+                                        Console.WriteLine("ERROR AL INTRODUCIR LA TAREA. INTRODÚCELA DE OTRA VEZ")
+                                        tarea = Console.ReadLine
+                                    Else
+                                        condicion = True
+                                    End If
+
+                                Loop Until condicion = True
+
+                                lista12.Add(tarea)
+
+                            Case 2
+                                Console.WriteLine("Introduce la tarea que quieres completar")
+                                tCompletada = Console.ReadLine
+
+                                lista12.Remove(tCompletada)
+                                listaCompletadas.Add(tCompletada)
+
+                                Console.WriteLine()
+                                Console.WriteLine("Operación realizada con éxito")
+
+                            Case 3
+                                Console.WriteLine()
+                                Console.WriteLine("Número de tareas : {0}", lista12.Count)
+                                Console.WriteLine()
+
+                            Case 4
+                                For Each tarea In lista12
+                                    Console.WriteLine(tarea)
+                                Next
+
+                            Case 5
+                                For Each completada In listaCompletadas
+                                    Console.WriteLine(completada)
+                                Next
+
+                            Case 6
+                                Dim fechaTarea As String
+                                Dim posicion As Integer
+                                Console.WriteLine("Tareas que vencen hoy : ")
+
+                                For Each fecha In lista12
+                                    posicion = fecha.ToString.LastIndexOf("*")
+                                    fechaTarea = fecha.ToString.Substring(posicion + 1)
+
+                                    If fechaTarea = DateString Then
+                                        Console.WriteLine(fecha)
+                                    End If
+                                Next
+                        End Select
+
+                        Console.WriteLine
+                        Console.WriteLine("Quieres ejecutar otro apartado ? [s/n]")
+                        otroApartado = CChar(Console.ReadLine)
+
+                    Loop Until otroApartado = "N"c Or otroApartado = "n"c
             End Select
 
             Console.WriteLine()
