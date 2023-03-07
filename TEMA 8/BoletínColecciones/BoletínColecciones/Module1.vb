@@ -463,7 +463,7 @@ Module Module1
                             contadorVeintes += 1
                         End If
                     Next
-                    porcentaje = contadorVeintes * lista11.Count
+                    porcentaje = (contadorVeintes / lista11.Count) * 100
                     Console.WriteLine("El {0}% de los valores son superiores a 20", porcentaje)
                     Console.WriteLine()
 
@@ -498,8 +498,7 @@ Module Module1
                     Dim otroApartado As Char
 
                     Do
-
-                        Console.WriteLine("Introduce el apartado que quieres ejecutar [1-6]")
+                        Console.WriteLine("Introduce el apartado que quieres ejecutar [1-7]")
                         apartado = Convert.ToInt32(Console.ReadLine)
 
                         Select Case apartado
@@ -569,6 +568,25 @@ Module Module1
                                         Console.WriteLine(fecha)
                                     End If
                                 Next
+
+                            Case 7
+
+                                Dim prioridadString(lista12.Count - 1) As String
+                                Dim contador As Integer = 0
+                                Dim posicion As Integer
+
+                                For Each tar In lista12
+                                    prioridadString(contador) = Convert.ToString(tar)
+                                    posicion = prioridadString(contador).IndexOf("*") + 1
+                                    prioridadString(contador) = prioridadString(contador).Substring(posicion, 1)
+
+                                    If Convert.ToInt32(prioridadString(contador)) > 7 Then
+                                        Console.WriteLine(tar)
+                                    End If
+
+                                    contador += 1
+                                Next
+
                         End Select
 
                         Console.WriteLine
@@ -576,6 +594,42 @@ Module Module1
                         otroApartado = CChar(Console.ReadLine)
 
                     Loop Until otroApartado = "N"c Or otroApartado = "n"c
+
+                Case 13
+
+                    Dim lista13 As ArrayList = New ArrayList()
+                    Dim apartado As Integer
+                    Console.WriteLine("Introduce el apartado que quieres ejecutar {1-4}")
+                    apartado = Convert.ToInt32(Console.ReadLine)
+
+                    Select Case apartado
+                        Case 1
+                            Dim dni As String
+                            Console.WriteLine("Introduce un DNI")
+                            dni = Console.ReadLine
+
+                            If lista13.Contains(dni) Then
+                                Console.WriteLine("El DNI no se va a guardar, ya está en la lista")
+                            Else
+                                lista13.Add(dni)
+                            End If
+
+                        Case 2
+                            Dim dni As String
+                            Console.WriteLine("Introduce un dni para eliminarlo")
+                            dni = Console.ReadLine
+                            lista13.Remove(dni)
+
+                        Case 3
+                            For Each dni In lista13
+                                Console.WriteLine(dni)
+                            Next
+
+                        Case 4
+                            Console.WriteLine("Numero de DNIs almacenados {0}", lista13.Count)
+
+                    End Select
+
             End Select
 
             Console.WriteLine()
