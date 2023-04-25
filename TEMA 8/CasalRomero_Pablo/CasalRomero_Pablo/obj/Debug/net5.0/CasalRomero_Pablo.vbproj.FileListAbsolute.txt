@@ -1,0 +1,15 @@
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\bin\Debug\net5.0\CasalRomero_Pablo.exe
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\bin\Debug\net5.0\CasalRomero_Pablo.deps.json
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\bin\Debug\net5.0\CasalRomero_Pablo.runtimeconfig.json
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\bin\Debug\net5.0\CasalRomero_Pablo.runtimeconfig.dev.json
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\bin\Debug\net5.0\CasalRomero_Pablo.dll
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\bin\Debug\net5.0\ref\CasalRomero_Pablo.dll
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\bin\Debug\net5.0\CasalRomero_Pablo.pdb
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\obj\Debug\net5.0\CasalRomero_Pablo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\obj\Debug\net5.0\CasalRomero_Pablo.AssemblyInfoInputs.cache
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\obj\Debug\net5.0\CasalRomero_Pablo.AssemblyInfo.vb
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\obj\Debug\net5.0\CasalRomero_Pablo.vbproj.CoreCompileInputs.cache
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\obj\Debug\net5.0\CasalRomero_Pablo.dll
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\obj\Debug\net5.0\ref\CasalRomero_Pablo.dll
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\obj\Debug\net5.0\CasalRomero_Pablo.pdb
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomero_Pablo\CasalRomero_Pablo\obj\Debug\net5.0\CasalRomero_Pablo.genruntimeconfig.cache

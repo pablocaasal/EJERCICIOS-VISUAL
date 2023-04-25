@@ -18,8 +18,11 @@
         'Agregamos un jugador
 
         jugadores.Add("Dinho")
-        jugadores.Add("Orellana")
+        jugadores.Add(Nothing)
         jugadores.Add("Aspas")
+
+        Dim resultado As String = jugadores(1).ToString()
+        Console.WriteLine(resultado)
 
         'Borrar un jugador segun su indice
 

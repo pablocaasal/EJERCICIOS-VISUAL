@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CasalRomero_Pablo/1.0.0": {
+        "runtime": {
+          "CasalRomero_Pablo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CasalRomero_Pablo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

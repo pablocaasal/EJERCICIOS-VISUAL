@@ -1,0 +1,11 @@
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\bin\Debug\CasalRomeroPablo.exe.config
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\bin\Debug\CasalRomeroPablo.exe
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\bin\Debug\CasalRomeroPablo.pdb
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\bin\Debug\CasalRomeroPablo.xml
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\obj\Debug\CasalRomeroPablo.Resources.resources
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\obj\Debug\CasalRomeroPablo.vbproj.GenerateResource.cache
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\obj\Debug\CasalRomeroPablo.vbproj.CoreCompileInputs.cache
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\obj\Debug\CasalRomeroPablo.exe
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\obj\Debug\CasalRomeroPablo.xml
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\obj\Debug\CasalRomeroPablo.pdb
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 8\CasalRomeroPablo\CasalRomeroPablo\obj\Debug\CasalRomeroPablo.vbproj.AssemblyReference.cache
