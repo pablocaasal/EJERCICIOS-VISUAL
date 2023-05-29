@@ -1,5 +1,7 @@
-﻿Public Class Form1
-    Public listaSeries As List(Of String)
+﻿Imports System.IO
+Public Class Form1
+    Public listaSeries As New List(Of String)
+    Public ruta As String = Directory.GetCurrentDirectory() + "/series.txt"
 
     Private Sub btnGuardarSerie_Click(sender As Object, e As EventArgs) Handles btnGuardarSerie.Click
         Dim plataforma As String
@@ -57,5 +59,39 @@
 
     Private Sub btnConsultarSeries_Click(sender As Object, e As EventArgs) Handles btnConsultarSeries.Click
         Form2.ShowDialog()
+    End Sub
+
+    Private Sub Form1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        'guardar los datos en el fichero
+
+        Dim respuesta As DialogResult = MessageBox.Show("Quieres actualizar el fichero ? ", "Cuidado", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If respuesta = DialogResult.Yes Then
+            'escribir en el fichero
+            Dim escritor As StreamWriter = New StreamWriter(ruta, False)
+
+            For Each elemento In listaSeries
+                escritor.WriteLine(elemento)
+            Next
+
+            escritor.Close()
+        End If
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'leer el fichero y volcar informacion a la lista
+
+        Dim lector As StreamReader = New StreamReader(ruta)
+        Dim registro As String = Nothing
+
+        While Not lector.EndOfStream
+            registro = lector.ReadLine
+            listaSeries.Add(registro)
+        End While
+        lector.Close()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        eventosTeclados.ShowDialog()
     End Sub
 End Class

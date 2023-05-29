@@ -11,3 +11,4 @@ C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\appgráfica2\appgráfi
 C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\appgráfica2\appgráfica2\obj\Debug\appgráfica2.xml
 C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\appgráfica2\appgráfica2\obj\Debug\appgráfica2.pdb
 C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\appgráfica2\appgráfica2\obj\Debug\appgráfica2.Form2.resources
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\appgráfica2\appgráfica2\obj\Debug\appgráfica2.eventosTeclados.resources

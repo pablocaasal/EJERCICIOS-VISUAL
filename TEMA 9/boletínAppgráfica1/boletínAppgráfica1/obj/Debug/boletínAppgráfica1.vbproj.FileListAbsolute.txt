@@ -12,3 +12,9 @@ C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\boletínAppgráfica1\b
 C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\boletínAppgráfica1\boletínAppgráfica1\obj\Debug\boletínAppgráfica1.xml
 C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\boletínAppgráfica1\boletínAppgráfica1\obj\Debug\boletínAppgráfica1.pdb
 C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\boletínAppgráfica1\boletínAppgráfica1\obj\Debug\boletínAppgráfica1.ejercicio2.resources
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\boletínAppgráfica1\boletínAppgráfica1\obj\Debug\boletínAppgráfica1.ejercicio3.resources
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\boletínAppgráfica1\boletínAppgráfica1\obj\Debug\boletínAppgráfica1.ejercicio4.resources
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\boletínAppgráfica1\boletínAppgráfica1\obj\Debug\boletínAppgráfica1.ejercicio5.resources
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\boletínAppgráfica1\boletínAppgráfica1\obj\Debug\boletínAppgráfica1.ejercicio6.resources
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\boletínAppgráfica1\boletínAppgráfica1\obj\Debug\boletínAppgráfica1.ejercicio7.resources
+C:\Users\alumno\Documents\GitHub\EJERCICIOS-VISUAL\TEMA 9\boletínAppgráfica1\boletínAppgráfica1\obj\Debug\boletínAppgráfica1.ejercicio8.resources

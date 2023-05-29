@@ -85,6 +85,42 @@
     <Compile Include="ejercicio2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ejercicio3.Designer.vb">
+      <DependentUpon>ejercicio3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ejercicio3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ejercicio4.Designer.vb">
+      <DependentUpon>ejercicio4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ejercicio4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ejercicio5.Designer.vb">
+      <DependentUpon>ejercicio5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ejercicio5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ejercicio6.Designer.vb">
+      <DependentUpon>ejercicio6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ejercicio6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ejercicio7.Designer.vb">
+      <DependentUpon>ejercicio7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ejercicio7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ejercicio8.Designer.vb">
+      <DependentUpon>ejercicio8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ejercicio8.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +150,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ejercicio2.resx">
       <DependentUpon>ejercicio2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ejercicio3.resx">
+      <DependentUpon>ejercicio3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ejercicio4.resx">
+      <DependentUpon>ejercicio4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ejercicio5.resx">
+      <DependentUpon>ejercicio5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ejercicio6.resx">
+      <DependentUpon>ejercicio6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ejercicio7.resx">
+      <DependentUpon>ejercicio7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ejercicio8.resx">
+      <DependentUpon>ejercicio8.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
